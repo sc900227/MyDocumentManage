@@ -52,5 +52,6 @@ namespace MyDocumentManage.Application.UserInfos.Dto
         /// 试剂ID
         /// </summary>
         public Int64 ReagentID { get; set; }
+
     }
 }
