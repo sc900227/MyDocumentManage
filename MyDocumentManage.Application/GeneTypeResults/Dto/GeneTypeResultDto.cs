@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyDocumentManage.Application.GeneTypeResults.Dto
 {
-    class GeneTypeResultDto
+    public class GeneTypeResultDto
     {
     }
 }
