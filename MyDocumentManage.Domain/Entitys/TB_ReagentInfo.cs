@@ -1,0 +1,27 @@
+﻿using Abp.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace MyDocumentManage.Domain.Entitys
+{
+    /// <summary>
+    /// 试剂信息表
+    /// </summary>
+    public class TB_ReagentInfo: Entity<Int64>
+    {
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        public Int64 ID { get; set; }
+        /// <summary>
+        /// 试剂名称
+        /// </summary>
+        public string ReagentName { get; set; }
+        /// <summary>
+        /// 作用药物
+        /// </summary>
+        public string ForDrug { get; set; }
+    }
+}
