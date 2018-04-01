@@ -12,6 +12,7 @@ namespace MyDocumentManage.Application.UserInfos.Dto
     {
         public GeneInfoMapProfile() {
             CreateMap<GeneInfoDto, TB_GeneInfo>();
+            CreateMap<TB_GeneInfo, CreateGeneInfoDto>();
         }
         
     }

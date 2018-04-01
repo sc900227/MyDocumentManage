@@ -1,21 +1,25 @@
 ﻿using Abp.Application.Services.Dto;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MyDocumentManage.Application.UserInfos.Dto
 {
-    public class GeneInfoDto: EntityDto<Int64>
+    public class GeneInfoDto : EntityDto<Int64>
     {
-        /// <summary>
-        /// 主键ID
-        /// </summary>
-        public Int64 ID { get; set; }
+        
+        ///// <summary>
+        ///// 主键ID
+        ///// </summary>
+        //[Required]
+        //public Int64 ID { get; set; }
         /// <summary>
         /// 基因名称
         /// </summary>
+        [Required]
         public string GeneName { get; set; }
         /// <summary>
         /// 检测方法
