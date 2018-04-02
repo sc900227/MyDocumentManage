@@ -4,6 +4,7 @@ using Abp.Dapper.Repositories;
 using MyDocumentManage.Application.UserInfos.Dto;
 using MyDocumentManage.Domain.Entitys;
 using MyDocumentManage.Domain.Repositorys;
+using MyDocumentManage.Domain.Repositorys.GeneInfo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,16 +37,16 @@ namespace MyDocumentManage.Application.UserInfos
             var geneInfos = GeneInfoDapperRepository.GetAll().ToList();
             return new List<GeneInfoDto>(ObjectMapper.Map<List<GeneInfoDto>>(geneInfos));
         }
-        public TB_GeneInfo Create(CreateGeneInfoDto input) {
+        public GeneInfoDto Create(CreateGeneInfoDto input) {
             var geneInfo = ObjectMapper.Map<TB_GeneInfo>(input);
             Int64 id=  GeneInfoDapperRepository.InsertAndGetId(geneInfo);
-            return GeneInfoDapperRepository.Get(id);
+            return ObjectMapper.Map<GeneInfoDto>(GeneInfoDapperRepository.Get(id));
         }
 
-        public TB_GeneInfo Update(GeneInfoDto input) {
+        public GeneInfoDto Update(GeneInfoDto input) {
             var geneInfo = ObjectMapper.Map<TB_GeneInfo>(input);
             GeneInfoDapperRepository.Update(geneInfo);
-            return GeneInfoDapperRepository.Get(input.Id);
+            return ObjectMapper.Map<GeneInfoDto>(GeneInfoDapperRepository.Get(input.Id));
         }
 
         public void Delete(Int64 id) {

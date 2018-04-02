@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using MyDocumentManage.Infrastructure;
 using Abp.NHibernate.Repositories;
 
-namespace MyDocumentManage.Domain.Repositorys
+namespace MyDocumentManage.Domain.Repositorys.GeneInfo
 {
     public class GeneInfoRep: NhRepositoryBase<TB_GeneInfo, Int64>, IGeneInfoRep
     {

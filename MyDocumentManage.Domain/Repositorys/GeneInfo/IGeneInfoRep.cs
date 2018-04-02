@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDocumentManage.Domain.Repositorys
+namespace MyDocumentManage.Domain.Repositorys.GeneInfo
 {
     public interface IGeneInfoRep:IRepository<TB_GeneInfo,Int64>
 

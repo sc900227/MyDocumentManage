@@ -2,6 +2,7 @@
 using Abp.Modules;
 using Abp.NHibernate;
 using Abp.Reflection.Extensions;
+using MyDocumentManage.Domain.Repositorys;
 using MyDocumentManage.Infrastructure;
 using System;
 using System.Collections.Generic;

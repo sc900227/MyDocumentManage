@@ -13,5 +13,13 @@ namespace MyDocumentManage.Application.UserInfos
     {
         List<GeneInfoDto> GetGeneInfos();
         object GetGeneInfosOS();
+        GeneInfoDto Create(CreateGeneInfoDto input);
+
+
+        GeneInfoDto Update(GeneInfoDto input);
+
+
+        void Delete(Int64 id);
+        
     }
 }

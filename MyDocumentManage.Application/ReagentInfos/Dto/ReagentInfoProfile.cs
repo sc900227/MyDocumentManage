@@ -12,6 +12,7 @@ namespace MyDocumentManage.Application.ReagentInfos.Dto
     {
         public ReagentInfoProfile() {
             CreateMap<CreateReagentInfoDto, TB_ReagentInfo>();
+            CreateMap<ReagentInfoDto,TB_ReagentInfo>();
             CreateMap<TB_ReagentInfo, ReagentInfoDto>();
         }
     }

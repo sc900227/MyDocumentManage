@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyDocumentManage.Application.ReagentInfos.Dto
 {
-    public class CreateReagentInfoDto:EntityDto<Int64>
+    public class CreateReagentInfoDto
     {
         /// <summary>
         /// 试剂名称

@@ -8,7 +8,7 @@ using MyDocumentManage.Domain;
 using MyDocumentManage.Domain.Entitys;
 using MyDocumentManage.Infrastructure;
 
-namespace MyDocumentManage.Domain.Repositorys
+namespace MyDocumentManage.Domain.Repositorys.GeneInfo
 {
     public class GeneInfoQueryService : BaseQueryService, IGeneInfoQueryService
     {

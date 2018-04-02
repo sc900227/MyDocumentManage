@@ -1,5 +1,6 @@
 ﻿using Abp.Dapper.Repositories;
-using MyDocumentManage.Domain.Entitys;
+using Abp.Dependency;
+using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyDocumentManage.Domain.Repositorys
 {
-    public interface IGeneInfoDapperRep:IDapperRepository<TB_GeneInfo,Int64>
+    public interface IBaseDapperRepository<TEntity,TPrimaryKey>: IDapperRepository<TEntity, TPrimaryKey> where TEntity : class, IEntity<TPrimaryKey>
     {
     }
 }

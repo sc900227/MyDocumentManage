@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDocumentManage.Domain.Repositorys
+namespace MyDocumentManage.Domain.Repositorys.GeneInfo
 {
     public class GeneInfoDapperRep: DapperRepositoryBase<TB_GeneInfo,Int64>,IGeneInfoDapperRep
     {
