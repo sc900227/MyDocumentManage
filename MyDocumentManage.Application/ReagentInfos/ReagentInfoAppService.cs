@@ -1,5 +1,7 @@
 ﻿using Abp.Application.Services;
 using Abp.Dapper.Repositories;
+using Abp.Dependency;
+using Abp.Domain.Repositories;
 using MyDocumentManage.Application.ReagentInfos.Dto;
 using MyDocumentManage.Domain.Entitys;
 using MyDocumentManage.Domain.Repositorys;
@@ -14,8 +16,10 @@ namespace MyDocumentManage.Application.ReagentInfos
 {
     public class ReagentInfoAppService:ApplicationService,IReagentInfoAppService
     {
+        //private readonly IReagentInfoRep dapperRepository;
+        //private readonly IRepository<TB_ReagentInfo,Int64> dapperRepository;
         private readonly IReagentInfoRep dapperRepository;
-       
+
         public ReagentInfoAppService(IReagentInfoRep _dapperRepository)
         {
             dapperRepository = _dapperRepository;
@@ -27,6 +31,7 @@ namespace MyDocumentManage.Application.ReagentInfos
 
         public ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input) {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
+            
             var id=dapperRepository.InsertAndGetId(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(dapperRepository.Get(id));
         }

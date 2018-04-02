@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyDocumentManage.Domain.Repositorys.ReagentInfo
 {
-    public interface IReagentInfoRep: IDapperRepository<TB_ReagentInfo,Int64>
+    public interface IReagentInfoRep:IBaseDapperRepository<TB_ReagentInfo, Int64> //IDapperRepository<TB_ReagentInfo,Int64>
     {
     }
 }

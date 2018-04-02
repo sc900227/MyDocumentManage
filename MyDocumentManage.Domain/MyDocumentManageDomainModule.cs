@@ -1,7 +1,12 @@
 ﻿
+using Abp.Dapper;
+using Abp.Dependency;
+using Abp.Domain.Repositories;
+using Abp.EntityFramework;
 using Abp.Modules;
 using Abp.NHibernate;
 using Abp.Reflection.Extensions;
+using MyDocumentManage.Domain.Entitys;
 using MyDocumentManage.Domain.Repositorys;
 using MyDocumentManage.Infrastructure;
 using System;
@@ -20,6 +25,7 @@ namespace MyDocumentManage.Domain
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+            
         }
     }
 }

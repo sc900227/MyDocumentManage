@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using Abp.EntityFramework;
 
 namespace MyDocumentManage.App_Start
 {

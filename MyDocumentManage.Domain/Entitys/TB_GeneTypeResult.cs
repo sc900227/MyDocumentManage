@@ -1,6 +1,7 @@
 ﻿using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 
@@ -11,10 +12,10 @@ namespace MyDocumentManage.Domain.Entitys
     /// </summary>
     public class TB_GeneTypeResult:Entity<Int64>
     {
-        /// <summary>
-        /// 主键ID
-        /// </summary>
-        public Int64 ID { get; set; }
+        ///// <summary>
+        ///// 主键ID
+        ///// </summary>
+        //public Int64 ID { get; set; }
         /// <summary>
         /// 试剂ID
         /// </summary>
