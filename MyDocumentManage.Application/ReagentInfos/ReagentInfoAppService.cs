@@ -8,6 +8,7 @@ using MyDocumentManage.Domain.Repositorys;
 using MyDocumentManage.Domain.Repositorys.ReagentInfo;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,35 +18,43 @@ namespace MyDocumentManage.Application.ReagentInfos
     public class ReagentInfoAppService:ApplicationService,IReagentInfoAppService
     {
         //private readonly IReagentInfoRep dapperRepository;
-        private readonly IRepository<TB_ReagentInfo,Int64> dapperRepository;
+        private readonly IRepository<TB_ReagentInfo,Int64> repository;
         //private readonly IReagentInfoRep dapperRepository;
 
-        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _dapperRepository)
+        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository)
         {
-            dapperRepository = _dapperRepository;
+            repository = _repository;
         }
         public List<ReagentInfoDto> GetReagentInfos() {
-            var reagentInfos= dapperRepository.GetAll().OrderBy(a => a.Id).ToList();
+            var reagentInfos= repository.GetAll().OrderBy(a => a.Id).ToList();
             return ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
         }
 
-        public ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input) {
-            var reagentInfo = new TB_ReagentInfo {ReagentName=input.ReagentName,ForDrug=input.ForDrug };//ObjectMapper.Map<TB_ReagentInfo>(input);
+        public Int64 CreateReagentInfo(CreateReagentInfoDto input) {
+            var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
+            reagentInfo.ID =reagentInfo.Id= GetMaxID() + 1;
             
-            var id=dapperRepository.InsertAndGetId(reagentInfo);
-            return ObjectMapper.Map<ReagentInfoDto>(dapperRepository.Get(id));
+            var id= repository.InsertAndGetId(reagentInfo);
+            return id;
         }
 
         public ReagentInfoDto Update(ReagentInfoDto input)
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
-            dapperRepository.Update(reagentInfo);
-            return ObjectMapper.Map<ReagentInfoDto>(dapperRepository.Get(input.Id));
+            repository.Update(reagentInfo);
+            return ObjectMapper.Map<ReagentInfoDto>(repository.Get(input.Id));
         }
 
         public void Delete(Int64 id) {
-            var reagentInfo=dapperRepository.Get(id);
-            dapperRepository.Delete(reagentInfo);
+            //var reagentInfo= repository.Get(id);
+            repository.Delete(a => a.ID == id);
+        }
+
+        public long GetMaxID()
+        {
+            var info = repository.GetAll().OrderByDescending(a => a.Id).Select(a => new ReagentInfoDto { Id = a.Id }).FirstOrDefault();
+            Int64 maxId = info.Id;
+            return maxId;
         }
     }
 }

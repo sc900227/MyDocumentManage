@@ -13,10 +13,10 @@ namespace MyDocumentManage.Domain.Entitys
     [Table("TB_ReagentInfo")]
     public class TB_ReagentInfo: Entity<Int64>
     {
-        ///// <summary>
-        ///// 主键ID
-        ///// </summary>
-        //public Int64 ID { get; set; }
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        public Int64 ID { get; set; }
         /// <summary>
         /// 试剂名称
         /// </summary>

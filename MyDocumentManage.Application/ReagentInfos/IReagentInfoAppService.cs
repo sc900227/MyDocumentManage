@@ -13,7 +13,7 @@ namespace MyDocumentManage.Application.ReagentInfos
         List<ReagentInfoDto> GetReagentInfos();
 
 
-        ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input);
+        Int64 CreateReagentInfo(CreateReagentInfoDto input);
 
 
 
@@ -22,6 +22,7 @@ namespace MyDocumentManage.Application.ReagentInfos
 
 
         void Delete(Int64 id);
+        Int64 GetMaxID();
        
     }
 }
