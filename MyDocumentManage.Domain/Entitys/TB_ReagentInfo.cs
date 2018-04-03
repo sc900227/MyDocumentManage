@@ -10,6 +10,7 @@ namespace MyDocumentManage.Domain.Entitys
     /// <summary>
     /// 试剂信息表
     /// </summary>
+    [Table("TB_ReagentInfo")]
     public class TB_ReagentInfo: Entity<Int64>
     {
         ///// <summary>

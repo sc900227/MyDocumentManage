@@ -10,6 +10,7 @@ namespace MyDocumentManage.Domain.Entitys
     /// <summary>
     /// 基因型结果表
     /// </summary>
+    [Table("TB_GeneTypeResult")]
     public class TB_GeneTypeResult:Entity<Int64>
     {
         ///// <summary>

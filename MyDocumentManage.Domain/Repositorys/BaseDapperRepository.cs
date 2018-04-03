@@ -15,7 +15,7 @@ namespace MyDocumentManage.Domain.Repositorys
 {
     public class BaseDapperRepository<TEntity, TPrimaryKey>: EfRepositoryBase<LocalDbContext, TEntity, TPrimaryKey>, IBaseDapperRepository<TEntity, TPrimaryKey> where TEntity:class, IEntity<TPrimaryKey>
     {
-        public BaseDapperRepository(LocalDbContextProvider<LocalDbContext> dbContextProvider) : base(dbContextProvider) { }
+        public BaseDapperRepository(IDbContextProvider<LocalDbContext> dbContextProvider) : base(dbContextProvider) { }
         //public BaseDapperRepository(LocalDbActiveTransactionProvider DbActive) : base(DbActive) { }
     }
 }

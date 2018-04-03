@@ -11,6 +11,7 @@ using MyDocumentManage.Domain.Repositorys;
 using MyDocumentManage.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,14 +19,19 @@ using System.Threading.Tasks;
 
 namespace MyDocumentManage.Domain
 {
-    [DependsOn(typeof(MyDocumentManageInfrastructureModule))]
+    [DependsOn(typeof(AbpEntityFrameworkModule),typeof(MyDocumentManageInfrastructureModule))]
     public class MyDocumentManageDomainModule:AbpModule
     {
-        
+        public override void PreInitialize()
+        {
+            Database.SetInitializer<LocalDbContext>(null);
+            Configuration.DefaultNameOrConnectionString = "mydb";
+            Configuration.UnitOfWork.IsolationLevel = System.Transactions.IsolationLevel.ReadCommitted;
+
+        }
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
-            
         }
     }
 }

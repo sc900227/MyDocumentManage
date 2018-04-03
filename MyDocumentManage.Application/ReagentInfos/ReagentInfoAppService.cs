@@ -17,10 +17,10 @@ namespace MyDocumentManage.Application.ReagentInfos
     public class ReagentInfoAppService:ApplicationService,IReagentInfoAppService
     {
         //private readonly IReagentInfoRep dapperRepository;
-        //private readonly IRepository<TB_ReagentInfo,Int64> dapperRepository;
-        private readonly IReagentInfoRep dapperRepository;
+        private readonly IRepository<TB_ReagentInfo,Int64> dapperRepository;
+        //private readonly IReagentInfoRep dapperRepository;
 
-        public ReagentInfoAppService(IReagentInfoRep _dapperRepository)
+        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _dapperRepository)
         {
             dapperRepository = _dapperRepository;
         }
@@ -30,7 +30,7 @@ namespace MyDocumentManage.Application.ReagentInfos
         }
 
         public ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input) {
-            var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
+            var reagentInfo = new TB_ReagentInfo {ReagentName=input.ReagentName,ForDrug=input.ForDrug };//ObjectMapper.Map<TB_ReagentInfo>(input);
             
             var id=dapperRepository.InsertAndGetId(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(dapperRepository.Get(id));
