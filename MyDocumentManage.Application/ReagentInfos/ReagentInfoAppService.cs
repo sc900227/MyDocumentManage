@@ -30,30 +30,28 @@ namespace MyDocumentManage.Application.ReagentInfos
             return ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
         }
 
-        public Int64 CreateReagentInfo(CreateReagentInfoDto input) {
+        public ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input) {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             reagentInfo.ID =reagentInfo.Id= GetMaxID() + 1;
-            
             var id= repository.InsertAndGetId(reagentInfo);
-            return id;
+            return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
-
-        public ReagentInfoDto Update(ReagentInfoDto input)
+        
+        public ReagentInfoDto UpdateReagentInfo(ReagentInfoDto input)
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             repository.Update(reagentInfo);
-            return ObjectMapper.Map<ReagentInfoDto>(repository.Get(input.Id));
+            return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
 
-        public void Delete(Int64 id) {
+        public void DeleteReagentInfo(Int64 id) {
             //var reagentInfo= repository.Get(id);
             repository.Delete(a => a.ID == id);
         }
 
         public long GetMaxID()
         {
-            var info = repository.GetAll().OrderByDescending(a => a.Id).Select(a => new ReagentInfoDto { Id = a.Id }).FirstOrDefault();
-            Int64 maxId = info.Id;
+            Int64 maxId = repository.GetAll().OrderByDescending(a => a.Id).Select(a =>a.Id).FirstOrDefault();
             return maxId;
         }
     }

@@ -13,10 +13,10 @@ namespace MyDocumentManage.Domain.Entitys
     [Table("TB_GeneInfo")]
     public class TB_GeneInfo:Entity<Int64>
     {
-        ///// <summary>
-        ///// 主键ID
-        ///// </summary>
-        //public Int64 ID { get; set; }
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        public Int64 ID { get; set; }
         /// <summary>
         /// 基因名称
         /// </summary>

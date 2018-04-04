@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Abp.Application.Services;
+using Abp.Domain.Repositories;
+using MyDocumentManage.Application.GeneTypeResults.Dto;
+using MyDocumentManage.Domain.Entitys;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +10,44 @@ using System.Threading.Tasks;
 
 namespace MyDocumentManage.Application.GeneTypeResults
 {
-    public class GeneTypeResultAppService
+    public class GeneTypeResultAppService : ApplicationService, IGeneTypeResultAppService
     {
+        private readonly IRepository<TB_GeneTypeResult, Int64> repository;
+        public GeneTypeResultAppService(IRepository<TB_GeneTypeResult,Int64> _repository) {
+            repository = _repository;
+        }
+
+        public GeneTypeResultDto CreateGeneTypeResult(CreateGeneTypeResultDto input)
+        {
+            var info = ObjectMapper.Map<TB_GeneTypeResult>(input);
+            info.ID = info.Id = input.Id;
+            var infoId=repository.InsertAndGetId(info);
+            return ObjectMapper.Map<GeneTypeResultDto>(info);
+            
+        }
+
+        public void DeleteGeneTypeResult(GeneTypeResultDto input)
+        {
+            repository.Delete(a => a.ID == input.Id);
+            
+        }
+
+        public List<GeneTypeResultDto> GetGeneTypeResults()
+        {
+            var info= repository.GetAll().OrderBy(a => a.ID);
+            return ObjectMapper.Map<List<GeneTypeResultDto>>(info);
+        }
+
+        public Int64 GetMaxID() {
+           var maxId= repository.GetAll().OrderByDescending(a => a.ID).Select(a => a.ID).FirstOrDefault();
+            return maxId;
+        }
+
+        public GeneTypeResultDto UpdateGeneTypeResult(GeneTypeResultDto input)
+        {
+            var info = ObjectMapper.Map<TB_GeneTypeResult>(input);
+            repository.Update(info);
+            return ObjectMapper.Map<GeneTypeResultDto>(input);
+        }
     }
 }

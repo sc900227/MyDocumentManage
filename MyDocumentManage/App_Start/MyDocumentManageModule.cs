@@ -20,7 +20,6 @@ namespace MyDocumentManage.App_Start
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
             Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(MyDocumentManageApplicationModule).Assembly, "MyDocumentManage")
-                .WithConventionalVerbs()
                 .Build();
         }
         public override void PreInitialize()

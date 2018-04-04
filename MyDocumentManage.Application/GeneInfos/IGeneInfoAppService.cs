@@ -6,20 +6,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace MyDocumentManage.Application.UserInfos
 {
     public interface IGeneInfoAppService: IApplicationService
     {
+        [HttpGet]
         List<GeneInfoDto> GetGeneInfos();
-        object GetGeneInfosOS();
-        GeneInfoDto Create(CreateGeneInfoDto input);
+        [HttpPost]
+        GeneInfoDto CreateGeneInfo(CreateGeneInfoDto input);
 
+        [HttpPost]
+        GeneInfoDto UpdateGeneInfo(GeneInfoDto input);
 
-        GeneInfoDto Update(GeneInfoDto input);
-
-
-        void Delete(Int64 id);
+        [HttpPost]
+        void DeleteGeneInfo(GeneInfoDto input);
         
     }
 }

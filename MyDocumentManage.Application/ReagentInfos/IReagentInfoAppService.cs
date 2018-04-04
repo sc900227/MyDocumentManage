@@ -5,23 +5,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace MyDocumentManage.Application.ReagentInfos
 {
     public interface IReagentInfoAppService: IApplicationService
     {
+        [HttpGet]
         List<ReagentInfoDto> GetReagentInfos();
 
-
-        Int64 CreateReagentInfo(CreateReagentInfoDto input);
-
-
-
-        ReagentInfoDto Update(ReagentInfoDto input);
+        [HttpPost]
+        ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input);
 
 
+        [HttpPost]
+        ReagentInfoDto UpdateReagentInfo(ReagentInfoDto input);
 
-        void Delete(Int64 id);
+
+        [HttpPost]
+        void DeleteReagentInfo(Int64 id);
+        [HttpGet]
         Int64 GetMaxID();
        
     }

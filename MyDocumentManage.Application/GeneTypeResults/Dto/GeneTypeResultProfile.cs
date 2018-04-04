@@ -13,6 +13,7 @@ namespace MyDocumentManage.Application.GeneTypeResults.Dto
         public GeneTypeResultProfile() {
             CreateMap<CreateGeneTypeResultDto, TB_GeneTypeResult>();
             CreateMap<TB_GeneTypeResult, GeneTypeResultDto>();
+            CreateMap<GeneTypeResultDto, TB_GeneTypeResult>();
         }
     }
 }

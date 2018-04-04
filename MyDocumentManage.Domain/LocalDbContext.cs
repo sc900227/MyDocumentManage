@@ -27,8 +27,8 @@ namespace MyDocumentManage.Domain
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<TB_GeneInfo>().ToTable("TB_GeneInfo");
-            modelBuilder.Entity<TB_GeneTypeResult>().ToTable("TB_GeneTypeResult");
+            modelBuilder.Entity<TB_GeneInfo>().ToTable("TB_GeneInfo").HasKey(a=>a.ID);
+            modelBuilder.Entity<TB_GeneTypeResult>().ToTable("TB_GeneTypeResult").HasKey(a=>a.ID);
             modelBuilder.Entity<TB_ReagentInfo>().ToTable("TB_ReagentInfo").HasKey(a=>a.ID);
         }
 
