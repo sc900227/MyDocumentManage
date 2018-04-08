@@ -12,20 +12,19 @@ namespace MyDocumentManage.Application.ReagentInfos
     public interface IReagentInfoAppService: IApplicationService
     {
         [HttpGet]
-        List<ReagentInfoDto> GetReagentInfos();
+        Task<List<ReagentInfoDto>> GetReagentInfos();
 
         [HttpPost]
-        ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input);
-
-
-        [HttpPost]
-        ReagentInfoDto UpdateReagentInfo(ReagentInfoDto input);
+        Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input);
 
 
         [HttpPost]
-        void DeleteReagentInfo(Int64 id);
-        [HttpGet]
-        Int64 GetMaxID();
+        Task<ReagentInfoDto> UpdateReagentInfo(ReagentInfoDto input);
+
+
+        [HttpPost]
+        Task DeleteReagentInfo(Int64 id);
+        
        
     }
 }

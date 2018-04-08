@@ -25,28 +25,29 @@ namespace MyDocumentManage.Application.ReagentInfos
         {
             repository = _repository;
         }
-        public List<ReagentInfoDto> GetReagentInfos() {
-            var reagentInfos= repository.GetAll().OrderBy(a => a.Id).ToList();
+        public async Task<List<ReagentInfoDto>> GetReagentInfos() {
+            var reagentInfos = await repository.GetAllListAsync();
+            reagentInfos=reagentInfos.OrderBy(a => a.Id).ToList();
             return ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
         }
 
-        public ReagentInfoDto CreateReagentInfo(CreateReagentInfoDto input) {
+        public async Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input) {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             reagentInfo.ID =reagentInfo.Id= GetMaxID() + 1;
-            var id= repository.InsertAndGetId(reagentInfo);
+            var id= await repository.InsertAndGetIdAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
         
-        public ReagentInfoDto UpdateReagentInfo(ReagentInfoDto input)
+        public async Task<ReagentInfoDto> UpdateReagentInfo(ReagentInfoDto input)
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
-            repository.Update(reagentInfo);
+            await repository.UpdateAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
 
-        public void DeleteReagentInfo(Int64 id) {
+        public async Task DeleteReagentInfo(Int64 id) {
             //var reagentInfo= repository.Get(id);
-            repository.Delete(a => a.ID == id);
+            await repository.DeleteAsync(a => a.ID == id);
         }
 
         public long GetMaxID()

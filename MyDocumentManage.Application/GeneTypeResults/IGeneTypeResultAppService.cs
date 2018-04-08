@@ -12,14 +12,14 @@ namespace MyDocumentManage.Application.GeneTypeResults
     public interface IGeneTypeResultAppService: IApplicationService
     {
         [HttpGet]
-        List<GeneTypeResultDto> GetGeneTypeResults();
+        Task<List<GeneTypeResultDto>> GetGeneTypeResults();
         [HttpPost]
-        GeneTypeResultDto CreateGeneTypeResult(CreateGeneTypeResultDto input);
+        Task<GeneTypeResultDto> CreateGeneTypeResult(CreateGeneTypeResultDto input);
 
         [HttpPost]
-        GeneTypeResultDto UpdateGeneTypeResult(GeneTypeResultDto input);
+        Task<GeneTypeResultDto> UpdateGeneTypeResult(GeneTypeResultDto input);
 
         [HttpPost]
-        void DeleteGeneTypeResult(GeneTypeResultDto input);
+        Task DeleteGeneTypeResult(GeneTypeResultDto input);
     }
 }

@@ -13,15 +13,15 @@ namespace MyDocumentManage.Application.UserInfos
     public interface IGeneInfoAppService: IApplicationService
     {
         [HttpGet]
-        List<GeneInfoDto> GetGeneInfos();
+        Task<List<GeneInfoDto>> GetGeneInfos();
         [HttpPost]
-        GeneInfoDto CreateGeneInfo(CreateGeneInfoDto input);
+        Task<GeneInfoDto> CreateGeneInfo(CreateGeneInfoDto input);
 
         [HttpPost]
-        GeneInfoDto UpdateGeneInfo(GeneInfoDto input);
+        Task<GeneInfoDto> UpdateGeneInfo(GeneInfoDto input);
 
         [HttpPost]
-        void DeleteGeneInfo(GeneInfoDto input);
+        Task DeleteGeneInfo(GeneInfoDto input);
         
     }
 }

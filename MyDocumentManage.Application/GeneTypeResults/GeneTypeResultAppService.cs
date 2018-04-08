@@ -17,24 +17,24 @@ namespace MyDocumentManage.Application.GeneTypeResults
             repository = _repository;
         }
 
-        public GeneTypeResultDto CreateGeneTypeResult(CreateGeneTypeResultDto input)
+        public async Task<GeneTypeResultDto> CreateGeneTypeResult(CreateGeneTypeResultDto input)
         {
             var info = ObjectMapper.Map<TB_GeneTypeResult>(input);
             info.ID = info.Id = input.Id;
-            var infoId=repository.InsertAndGetId(info);
+            var infoId=await repository.InsertAndGetIdAsync(info);
             return ObjectMapper.Map<GeneTypeResultDto>(info);
             
         }
 
-        public void DeleteGeneTypeResult(GeneTypeResultDto input)
+        public async Task DeleteGeneTypeResult(GeneTypeResultDto input)
         {
-            repository.Delete(a => a.ID == input.Id);
-            
+             await repository.DeleteAsync(a => a.ID == input.Id);
         }
 
-        public List<GeneTypeResultDto> GetGeneTypeResults()
+        public async Task<List<GeneTypeResultDto>> GetGeneTypeResults()
         {
-            var info= repository.GetAll().OrderBy(a => a.ID);
+            var info = await repository.GetAllListAsync();
+            info=info.OrderBy(a => a.ID).ToList();
             return ObjectMapper.Map<List<GeneTypeResultDto>>(info);
         }
 
@@ -43,10 +43,10 @@ namespace MyDocumentManage.Application.GeneTypeResults
             return maxId;
         }
 
-        public GeneTypeResultDto UpdateGeneTypeResult(GeneTypeResultDto input)
+        public async Task<GeneTypeResultDto> UpdateGeneTypeResult(GeneTypeResultDto input)
         {
             var info = ObjectMapper.Map<TB_GeneTypeResult>(input);
-            repository.Update(info);
+            await repository.UpdateAsync(info);
             return ObjectMapper.Map<GeneTypeResultDto>(input);
         }
     }
