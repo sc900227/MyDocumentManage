@@ -163,3 +163,26 @@ DEBUG 2018-04-08 11:57:18,350 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2018-04-08 11:57:18,401 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
 WARN  2018-04-08 11:58:04,295 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
 WARN  2018-04-08 11:58:04,325 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-04-08 19:47:14,659 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-08 19:47:14,681 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-08 19:47:14,689 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManage.App_Start.MyDocumentManageModule, MyDocumentManage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,691 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,692 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,692 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,692 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,692 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManage.Application.MyDocumentManageApplicationModule, MyDocumentManage.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,692 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManage.Domain.MyDocumentManageDomainModule, MyDocumentManage.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManage.Infrastructure.MyDocumentManageInfrastructureModule, MyDocumentManage.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,693 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:14,696 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-08 19:47:15,075 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: MyDocumentManage.Domain.LocalDbContext, MyDocumentManage.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-08 19:47:15,167 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-08 19:47:15,324 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-08 19:47:15,394 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-08 19:47:15,613 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-08 19:47:15,639 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyDocumentManage.Application.UserInfos.IGeneInfoAppService' with service name 'MyDocumentManage/geneInfo'.
+DEBUG 2018-04-08 19:47:15,644 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyDocumentManage.Application.ReagentInfos.IReagentInfoAppService' with service name 'MyDocumentManage/reagentInfo'.
+DEBUG 2018-04-08 19:47:15,645 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'MyDocumentManage.Application.GeneTypeResults.IGeneTypeResultAppService' with service name 'MyDocumentManage/geneTypeResult'.
+DEBUG 2018-04-08 19:47:15,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
