@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace MyDocumentManageNetCore.Web
 {
@@ -27,6 +29,23 @@ namespace MyDocumentManageNetCore.Web
             services.AddMvc(
                 options => options.Filters.Add(new CorsAuthorizationFilterFactory(_defaultCorsPolicyName))
             );
+            // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
+            //services.AddSwaggerGen(options =>
+            //{
+            //    options.SwaggerDoc("v1", new Info { Title = "GeneDocument API", Version = "v1" });
+            //    options.DocInclusionPredicate((docName, description) => true);
+
+            //    // Define the BearerAuth scheme that's in use
+            //    options.AddSecurityDefinition("bearerAuth", new ApiKeyScheme()
+            //    {
+            //        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+            //        Name = "Authorization",
+            //        In = "header",
+            //        Type = "apiKey"
+            //    });
+            //    // Assign scope requirements to operations based on AuthorizeAttribute
+            //    options.OperationFilter<SecurityRequirementsOperationFilter>();
+            //});
             // Configure Abp and Dependency Injection
             return services.AddAbp<MyDocumentManageNetCoreWebModule>(
                 // Configure Log4Net logging
@@ -49,20 +68,43 @@ namespace MyDocumentManageNetCore.Web
         {
             app.UseAbp(); // Initializes ABP framework.
 
-            app.UseCors(_defaultCorsPolicyName); // Enable CORS!
+            //app.UseCors(_defaultCorsPolicyName); // Enable CORS!
 
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
-            app.UseAbpRequestLocalization();
+            //app.UseAbpRequestLocalization();
             //app.UseAbp();
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+            //app.UseSignalR(routes =>
+            //{
+            //    routes.MapHub<AbpCommonHub>("/signalr");
+            //});
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "defaultWithArea",
+                    template: "{area}/{controller=Values}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Values}/{action=Index}/{id?}");
+            });
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint
+            //app.UseSwagger();
+            //// Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+            //app.UseSwaggerUI(options =>
+            //{
+            //    options.InjectOnCompleteJavaScript("/swagger/ui/abp.js");
+            //    options.InjectOnCompleteJavaScript("/swagger/ui/on-complete.js");
+            //    options.SwaggerEndpoint("/swagger/v1/swagger.json", "GeneDocument API V1");
+            //}); // URL: /swagger
         }
     }
 }

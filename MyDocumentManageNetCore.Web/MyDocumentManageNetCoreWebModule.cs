@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using MyDocumentManageNetCore.Application;
 using MyDocumentManageNetCore.Domain;
 using MyDocumentManageNetCore.Domain.Configuration;
+using MyDocumentManageNetCoreTest.Application;
 using MyDocumentMange.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,12 @@ using System.Threading.Tasks;
 namespace MyDocumentManageNetCore.Web
 {
     [DependsOn(
+        typeof(AbpAspNetCoreModule),
         typeof(MyDocumentManageNetCoreDomainModule),
-         typeof(MyDocumentManageNetCoreApplicationModule),
-         typeof(MyDocumentMangeEntityFrameworkCoreModule),
-         typeof(AbpAspNetCoreModule))]
-    public class MyDocumentManageNetCoreWebModule:AbpModule
+         typeof(MyDocumentManageNetCoreTestApplicationModule),
+         typeof(MyDocumentMangeEntityFrameworkCoreModule)
+         )]
+    public class MyDocumentManageNetCoreWebModule : AbpModule
     {
         private readonly IHostingEnvironment _env;
         private readonly IConfigurationRoot _appConfiguration;
@@ -32,14 +34,15 @@ namespace MyDocumentManageNetCore.Web
         }
         public override void PreInitialize()
         {
-            
+
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
                 "mydb"
             );
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(
-                     typeof(MyDocumentManageNetCoreApplicationModule).GetAssembly()
+                     typeof(MyDocumentManageNetCoreTestApplicationModule).GetAssembly()
                  );
+
         }
         public override void Initialize()
         {

@@ -17,9 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDocumentManageNetCore.App
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDocumentMange.EntityFramework", "MyDocumentMange.EntityFramework\MyDocumentMange.EntityFramework.csproj", "{8DD84FFE-82CA-49E8-A795-74181806D31A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDocumentMange.EntityFrameworkCore", "MyDocumentMange.EntityFrameworkCore\MyDocumentMange.EntityFrameworkCore.csproj", "{B87764A6-5B8B-4922-ADC7-E19818AA3598}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDocumentMange.EntityFrameworkCore", "MyDocumentMange.EntityFrameworkCore\MyDocumentMange.EntityFrameworkCore.csproj", "{B87764A6-5B8B-4922-ADC7-E19818AA3598}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDocumentManageNetCore.Domain", "MyDocumentManageNetCore.Domain\MyDocumentManageNetCore.Domain.csproj", "{87E66CBF-9933-45E5-96D1-0401D3F50C59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDocumentManageNetCore.Domain", "MyDocumentManageNetCore.Domain\MyDocumentManageNetCore.Domain.csproj", "{87E66CBF-9933-45E5-96D1-0401D3F50C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDocumentManageNetCoreTest.Application", "MyDocumentManageNetCoreTest.Application\MyDocumentManageNetCoreTest.Application.csproj", "{2C7253AF-C4C9-45D0-BA14-E3881347F486}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{87E66CBF-9933-45E5-96D1-0401D3F50C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87E66CBF-9933-45E5-96D1-0401D3F50C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87E66CBF-9933-45E5-96D1-0401D3F50C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7253AF-C4C9-45D0-BA14-E3881347F486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7253AF-C4C9-45D0-BA14-E3881347F486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7253AF-C4C9-45D0-BA14-E3881347F486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7253AF-C4C9-45D0-BA14-E3881347F486}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
