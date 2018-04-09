@@ -4,8 +4,6 @@ using Abp.Dapper.Repositories;
 using Abp.Domain.Repositories;
 using MyDocumentManage.Application.UserInfos.Dto;
 using MyDocumentManage.Domain.Entitys;
-using MyDocumentManage.Domain.Repositorys;
-using MyDocumentManage.Domain.Repositorys.GeneInfo;
 using System;
 using System.Collections.Generic;
 using System.Linq;

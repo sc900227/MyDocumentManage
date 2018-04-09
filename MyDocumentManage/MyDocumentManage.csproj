@@ -353,6 +353,14 @@
       <Project>{9554E9A1-D572-4C15-A6B1-788894656A8A}</Project>
       <Name>MyDocumentManage.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyDocumentManage.Domain\MyDocumentManage.Domain.csproj">
+      <Project>{5779AAF2-6F65-4816-9C81-D4BB683FD842}</Project>
+      <Name>MyDocumentManage.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyDocumentMange.EntityFramework\MyDocumentMange.EntityFramework.csproj">
+      <Project>{8DD84FFE-82CA-49E8-A795-74181806D31A}</Project>
+      <Name>MyDocumentMange.EntityFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

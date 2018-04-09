@@ -47,7 +47,16 @@ namespace MyDocumentManageNetCore.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseAbp();
+            app.UseAbp(); // Initializes ABP framework.
+
+            app.UseCors(_defaultCorsPolicyName); // Enable CORS!
+
+            app.UseStaticFiles();
+
+            app.UseAuthentication();
+
+            app.UseAbpRequestLocalization();
+            //app.UseAbp();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

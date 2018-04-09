@@ -9,10 +9,12 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 using Abp.EntityFramework;
+using MyDocumentMange.EntityFramework;
+using MyDocumentManage.Domain;
 
 namespace MyDocumentManage.App_Start
 {
-    [DependsOn(typeof(AbpWebApiModule),typeof(MyDocumentManageApplicationModule))]
+    [DependsOn(typeof(AbpWebApiModule),typeof(MyDocumentManageApplicationModule),typeof(MyDocumentMangeEntityFrameworkModule),typeof(MyDocumentManageDomainModule))]
     public class MyDocumentManageModule:AbpModule
     {
         public override void Initialize()

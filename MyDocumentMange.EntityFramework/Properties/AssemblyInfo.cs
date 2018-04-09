@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("MyDocumentManageNetCore.Domain")]
+[assembly: AssemblyTitle("MyDocumentMange.EntityFramework")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyDocumentManageNetCore.Domain")]
+[assembly: AssemblyProduct("MyDocumentMange.EntityFramework")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("cc72f84d-7118-4cb3-87eb-42e8e6820cac")]
+[assembly: Guid("8dd84ffe-82ca-49e8-a795-74181806d31a")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

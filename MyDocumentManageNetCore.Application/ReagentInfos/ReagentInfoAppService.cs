@@ -1,17 +1,15 @@
 ﻿using Abp.Application.Services;
-using Abp.Dapper.Repositories;
 using Abp.Dependency;
 using Abp.Domain.Repositories;
-using MyDocumentManage.Application.ReagentInfos.Dto;
 using MyDocumentManage.Domain.Entitys;
+using MyDocumentManageNetCore.Application.ReagentInfos.Dto;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDocumentManage.Application.ReagentInfos
+namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
     public class ReagentInfoAppService:ApplicationService,IReagentInfoAppService
     {

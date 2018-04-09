@@ -266,24 +266,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LocalDbActiveTransactionProvider.cs" />
-    <Compile Include="LocalDbContext.cs" />
     <Compile Include="LocalDbSessionProvider.cs" />
-    <Compile Include="Mapper\TB_GeneInfoMapper.cs" />
     <Compile Include="MyDocumentManageDomainModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entitys\TB_GeneInfo.cs" />
     <Compile Include="Entitys\TB_GeneTypeResult.cs" />
     <Compile Include="Entitys\TB_ReagentInfo.cs" />
-    <Compile Include="Repositorys\BaseDapperRepository.cs" />
-    <Compile Include="Repositorys\GeneInfo\GeneInfoDapperRep.cs" />
-    <Compile Include="Repositorys\GeneInfo\GeneInfoQueryService.cs" />
-    <Compile Include="Repositorys\GeneInfo\GeneInfoRep.cs" />
-    <Compile Include="Repositorys\GeneInfo\IGeneInfoDapperRep.cs" />
-    <Compile Include="Repositorys\GeneInfo\IGeneInfoQueryService.cs" />
-    <Compile Include="Repositorys\GeneInfo\IGeneInfoRep.cs" />
-    <Compile Include="Repositorys\IBaseDapperRepository.cs" />
-    <Compile Include="Repositorys\ReagentInfo\IReagentInfoRep.cs" />
-    <Compile Include="Repositorys\ReagentInfo\ReagentInfoRep.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
