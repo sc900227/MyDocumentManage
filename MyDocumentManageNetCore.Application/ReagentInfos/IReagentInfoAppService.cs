@@ -11,18 +11,18 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
     public interface IReagentInfoAppService: IApplicationService
     {
-        [HttpGet]
+        
         Task<List<ReagentInfoDto>> GetReagentInfos();
 
-        [HttpPost]
+        
         Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input);
 
 
-        [HttpPost]
+        
         Task<ReagentInfoDto> UpdateReagentInfo(ReagentInfoDto input);
 
 
-        [HttpPost]
+        
         Task DeleteReagentInfo(Int64 id);
         
        

@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseQueryService.cs" />
+    <Compile Include="HttpUtils.cs" />
     <Compile Include="MyDocumentManageInfrastructureModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

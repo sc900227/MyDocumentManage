@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using MyDocumentManage.Domain.Entitys;
+using MyDocumentManageNetCore.Domain.Entitys;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,8 +1,9 @@
 ﻿using Abp.Application.Services;
 using Abp.Dependency;
 using Abp.Domain.Repositories;
-using MyDocumentManage.Domain.Entitys;
+using Microsoft.AspNetCore.Mvc;
 using MyDocumentManageNetCore.Application.ReagentInfos.Dto;
+using MyDocumentManageNetCore.Domain.Entitys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,26 +22,27 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         {
             repository = _repository;
         }
+        [HttpGet]
         public async Task<List<ReagentInfoDto>> GetReagentInfos() {
             var reagentInfos = await repository.GetAllListAsync();
             reagentInfos=reagentInfos.OrderBy(a => a.Id).ToList();
             return ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
         }
-
+        [HttpPost]
         public async Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input) {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             reagentInfo.ID =reagentInfo.Id= GetMaxID() + 1;
             var id= await repository.InsertAndGetIdAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
-        
+        [HttpPost]
         public async Task<ReagentInfoDto> UpdateReagentInfo(ReagentInfoDto input)
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             await repository.UpdateAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
-
+        [HttpPost]
         public async Task DeleteReagentInfo(Int64 id) {
             //var reagentInfo= repository.Get(id);
             await repository.DeleteAsync(a => a.ID == id);

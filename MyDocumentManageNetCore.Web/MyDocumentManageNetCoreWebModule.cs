@@ -1,5 +1,6 @@
 ﻿using Abp.AspNetCore;
 using Abp.AspNetCore.Configuration;
+using Abp.AspNetCore.SignalR;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Microsoft.AspNetCore.Hosting;
@@ -19,8 +20,9 @@ namespace MyDocumentManageNetCore.Web
 {
     [DependsOn(
         typeof(AbpAspNetCoreModule),
+        typeof(AbpAspNetCoreSignalRModule),
         typeof(MyDocumentManageNetCoreDomainModule),
-         typeof(MyDocumentManageNetCoreTestApplicationModule),
+         typeof(MyDocumentManageNetCoreApplicationModule),
          typeof(MyDocumentMangeEntityFrameworkCoreModule)
          )]
     public class MyDocumentManageNetCoreWebModule : AbpModule
@@ -40,7 +42,7 @@ namespace MyDocumentManageNetCore.Web
             );
             Configuration.Modules.AbpAspNetCore()
                  .CreateControllersForAppServices(
-                     typeof(MyDocumentManageNetCoreTestApplicationModule).GetAssembly()
+                     typeof(MyDocumentManageNetCoreApplicationModule).GetAssembly()
                  );
 
         }

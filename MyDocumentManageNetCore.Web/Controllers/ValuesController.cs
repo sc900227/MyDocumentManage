@@ -17,6 +17,10 @@ namespace MyDocumentManageNetCore.Web.Controllers
         {
             _notificationPublisher = notificationPublisher;
         }
+        public IActionResult Index()
+        {
+            return Redirect("/swagger");
+        }
         //// GET api/values
         //[HttpGet]
         //public IEnumerable<string> Get()

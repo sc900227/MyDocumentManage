@@ -3492,3 +3492,688 @@ INFO  2018-04-10 00:11:06,167 [17   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-04-10 00:11:06,174 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 INFO  2018-04-10 00:11:06,177 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCoreTest.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCoreTest.Application) in 10.9356ms
 INFO  2018-04-10 00:11:06,179 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.6749ms 200 application/json; charset=utf-8
+DEBUG 2018-04-10 09:48:27,034 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 09:48:27,097 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 09:48:35,351 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,356 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,358 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,359 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,359 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:35,363 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 09:48:38,484 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:48:38,576 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 09:48:38,675 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 09:48:38,707 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 09:48:38,945 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 09:48:39,049 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 09:48:39,919 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 09:48:40,000 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 09:48:40,019 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 09:48:40,185 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 291.3575ms 404 
+INFO  2018-04-10 09:51:06,918 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 45
+ERROR 2018-04-10 09:51:07,021 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - Can't create component 'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' as it has dependencies to be satisfied.
+
+'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' is waiting for the following dependencies:
+- Service 'Abp.Domain.Repositories.IRepository`2[[MyDocumentManageNetCore.Domain.Entitys.TB_ReagentInfo, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' which was not registered.
+
+Castle.MicroKernel.Handlers.HandlerException: Can't create component 'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' as it has dependencies to be satisfied.
+
+'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' is waiting for the following dependencies:
+- Service 'Abp.Domain.Repositories.IRepository`2[[MyDocumentManageNetCore.Domain.Entitys.TB_ReagentInfo, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' which was not registered.
+
+   at Castle.MicroKernel.Handlers.DefaultHandler.AssertNotWaitingForDependency()
+   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   at Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional) in D:\Github\castle-windsor-ms-adapter\src\Castle.Windsor.MsDependencyInjection\ScopedWindsorServiceProvider.cs:line 55
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-04-10 09:51:07,116 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 09:51:07,269 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 268.8706ms
+INFO  2018-04-10 09:51:07,278 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 359.1639ms 500 application/json; charset=utf-8
+DEBUG 2018-04-10 09:55:07,973 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 09:55:08,036 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 09:55:08,050 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,054 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,061 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 09:55:08,384 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 09:55:08,468 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 09:55:08,533 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 09:55:08,563 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 09:55:08,823 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 09:55:08,905 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 09:55:09,535 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 09:55:09,612 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 09:55:09,630 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 09:55:09,779 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 262.4778ms 404 
+INFO  2018-04-10 09:55:26,757 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 45
+ERROR 2018-04-10 09:55:26,846 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - Can't create component 'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' as it has dependencies to be satisfied.
+
+'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' is waiting for the following dependencies:
+- Service 'Abp.Domain.Repositories.IRepository`2[[MyDocumentManageNetCore.Domain.Entitys.TB_ReagentInfo, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' which was not registered.
+
+Castle.MicroKernel.Handlers.HandlerException: Can't create component 'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' as it has dependencies to be satisfied.
+
+'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' is waiting for the following dependencies:
+- Service 'Abp.Domain.Repositories.IRepository`2[[MyDocumentManageNetCore.Domain.Entitys.TB_ReagentInfo, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' which was not registered.
+
+   at Castle.MicroKernel.Handlers.DefaultHandler.AssertNotWaitingForDependency()
+   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   at Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional) in D:\Github\castle-windsor-ms-adapter\src\Castle.Windsor.MsDependencyInjection\ScopedWindsorServiceProvider.cs:line 55
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-04-10 09:55:26,905 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 09:55:27,041 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 213.4432ms
+INFO  2018-04-10 09:55:27,049 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 291.7365ms 500 application/json; charset=utf-8
+DEBUG 2018-04-10 10:02:07,269 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 10:02:07,292 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 10:02:07,306 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,310 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,311 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,314 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 10:02:07,550 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:02:07,602 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 10:02:07,661 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 10:02:07,690 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 10:02:07,828 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 10:02:07,876 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 10:02:08,358 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+WARN  2018-04-10 10:02:08,404 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 10:02:08,417 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+ERROR 2018-04-10 10:02:08,538 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - Can't create component 'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' as it has dependencies to be satisfied.
+
+'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' is waiting for the following dependencies:
+- Service 'Abp.Domain.Repositories.IRepository`2[[MyDocumentManageNetCore.Domain.Entitys.TB_ReagentInfo, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' which was not registered.
+
+Castle.MicroKernel.Handlers.HandlerException: Can't create component 'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' as it has dependencies to be satisfied.
+
+'MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService' is waiting for the following dependencies:
+- Service 'Abp.Domain.Repositories.IRepository`2[[MyDocumentManageNetCore.Domain.Entitys.TB_ReagentInfo, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Int64, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]' which was not registered.
+
+   at Castle.MicroKernel.Handlers.DefaultHandler.AssertNotWaitingForDependency()
+   at Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   at Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   at Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional) in D:\Github\castle-windsor-ms-adapter\src\Castle.Windsor.MsDependencyInjection\ScopedWindsorServiceProvider.cs:line 55
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+INFO  2018-04-10 10:02:08,576 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:02:08,705 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 182.9852ms
+INFO  2018-04-10 10:02:08,706 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 359.2726ms 500 application/json; charset=utf-8
+DEBUG 2018-04-10 10:04:49,757 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 10:04:49,813 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 10:04:49,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,833 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,833 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,833 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,834 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,834 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,835 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,835 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,836 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,836 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:49,839 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 10:04:50,144 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:04:50,208 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 10:04:50,277 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 10:04:50,307 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 10:04:50,552 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 10:04:50,637 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 10:04:51,379 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 10:04:51,446 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 10:04:51,463 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 10:04:51,600 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 239.7077ms 404 
+INFO  2018-04-10 10:05:08,900 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:05:09,203 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:05:17,949 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:05:18,093 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 9137.1167ms
+INFO  2018-04-10 10:05:18,096 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9198.9501ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:05:31,568 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 45
+INFO  2018-04-10 10:05:31,689 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.CreateReagentInfoDto) - ModelState is Valid
+INFO  2018-04-10 10:05:43,092 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:05:43,094 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 11504.0931ms
+INFO  2018-04-10 10:05:43,099 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11531.5165ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:05:54,063 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:05:54,067 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:05:55,120 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:05:55,122 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 1056.5865ms
+INFO  2018-04-10 10:05:55,126 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1062.1861ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:06:30,682 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/json 11
+INFO  2018-04-10 10:06:30,686 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.9747ms 404 
+INFO  2018-04-10 10:07:58,993 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/x-www-form-urlencoded 4
+INFO  2018-04-10 10:07:58,995 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.6053ms 404 
+INFO  2018-04-10 10:08:36,734 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DELETE http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/x-www-form-urlencoded 4
+INFO  2018-04-10 10:08:36,764 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (3) - ModelState is Valid
+DEBUG 2018-04-10 10:09:14,960 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 10:09:15,014 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 10:09:15,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,034 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,035 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,035 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,036 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,036 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,036 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,037 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,043 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 10:09:15,356 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:09:15,420 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 10:09:15,488 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 10:09:15,519 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 10:09:15,758 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 10:09:15,837 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 10:09:16,534 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 10:09:16,617 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 10:09:16,633 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 10:09:16,792 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 260.1628ms 404 
+INFO  2018-04-10 10:10:34,361 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/UpdateReagentInfo application/x-www-form-urlencoded 41
+INFO  2018-04-10 10:10:34,380 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.5962ms 404 
+INFO  2018-04-10 10:12:01,861 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/UpdateReagentInfo application/json 45
+INFO  2018-04-10 10:12:01,864 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.6228ms 404 
+INFO  2018-04-10 10:12:24,145 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 PUT http://localhost:52427/api/services/app/ReagentInfo/UpdateReagentInfo application/json 45
+INFO  2018-04-10 10:12:24,638 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.UpdateReagentInfo (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.ReagentInfoDto) - ModelState is Valid
+INFO  2018-04-10 10:12:38,209 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:12:38,259 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.UpdateReagentInfo (MyDocumentManageNetCore.Application) in 14033.2924ms
+INFO  2018-04-10 10:12:38,263 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14118.4166ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:12:57,141 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:12:57,155 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:12:58,287 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:12:58,299 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 1150.4857ms
+INFO  2018-04-10 10:12:58,301 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1161.1222ms 200 application/json; charset=utf-8
+DEBUG 2018-04-10 10:20:29,068 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 10:20:29,113 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 10:20:29,129 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,135 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,135 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,136 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,136 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,140 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 10:20:29,463 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:20:29,526 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 10:20:29,604 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 10:20:29,636 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 10:20:29,879 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 10:20:29,960 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 10:20:30,564 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 10:20:30,632 [14   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 10:20:30,650 [14   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 10:20:30,786 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 240.495ms 404 
+INFO  2018-04-10 10:20:52,292 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:20:52,306 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.8409ms 404 
+INFO  2018-04-10 10:21:52,010 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:21:52,015 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.0944ms 404 
+DEBUG 2018-04-10 10:23:25,149 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 10:23:25,198 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 10:23:25,214 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,217 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,218 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,218 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,218 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,219 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,219 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,219 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,220 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,220 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,223 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 10:23:25,528 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:23:25,601 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 10:23:25,665 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 10:23:25,695 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 10:23:25,935 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 10:23:26,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 10:23:26,643 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 10:23:26,719 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 10:23:26,735 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 10:23:26,873 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 253.7481ms 404 
+INFO  2018-04-10 10:23:31,318 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:23:31,615 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:23:35,378 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:23:35,520 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 4146.6298ms
+INFO  2018-04-10 10:23:35,524 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4205.4528ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:23:58,319 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/x-www-form-urlencoded 4
+INFO  2018-04-10 10:23:58,376 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (3) - ModelState is Valid
+INFO  2018-04-10 10:24:27,173 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:24:27,176 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) in 28835.0332ms
+INFO  2018-04-10 10:24:27,179 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28860.3825ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:24:41,293 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/x-www-form-urlencoded 
+INFO  2018-04-10 10:24:41,298 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:24:43,771 [16   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:24:43,774 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 2476.7917ms
+INFO  2018-04-10 10:24:43,777 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2483.4115ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:25:00,404 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/x-www-form-urlencoded 36
+INFO  2018-04-10 10:25:00,428 [10   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 415
+INFO  2018-04-10 10:25:00,434 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 17.5488ms
+INFO  2018-04-10 10:25:00,436 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.2242ms 415 
+INFO  2018-04-10 10:25:27,719 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 36
+INFO  2018-04-10 10:25:27,795 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.CreateReagentInfoDto) - ModelState is Valid
+INFO  2018-04-10 10:25:31,551 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:25:31,554 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 3832.0148ms
+INFO  2018-04-10 10:25:31,558 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3839.7243ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:25:53,776 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/UpdateReagentInfo application/x-www-form-urlencoded 41
+INFO  2018-04-10 10:25:53,784 [16   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 415
+INFO  2018-04-10 10:25:53,787 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.UpdateReagentInfo (MyDocumentManageNetCore.Application) in 3.7916ms
+INFO  2018-04-10 10:25:53,789 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13.0563ms 415 
+INFO  2018-04-10 10:26:21,234 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/UpdateReagentInfo application/json 46
+INFO  2018-04-10 10:26:21,241 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.UpdateReagentInfo (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.ReagentInfoDto) - ModelState is Valid
+INFO  2018-04-10 10:26:26,994 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:26:26,997 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.UpdateReagentInfo (MyDocumentManageNetCore.Application) in 5759.7896ms
+INFO  2018-04-10 10:26:26,999 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5765.2154ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:26:39,644 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-10 10:26:39,649 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:26:43,052 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:26:43,055 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 3406.6353ms
+INFO  2018-04-10 10:26:43,058 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3414.1997ms 200 application/json; charset=utf-8
+DEBUG 2018-04-10 10:27:44,658 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 10:27:44,715 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 10:27:44,734 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,737 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,737 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,737 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,738 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,739 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,739 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,740 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:44,743 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 10:27:45,051 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 10:27:45,116 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 10:27:45,184 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 10:27:45,215 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 10:27:45,460 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 10:27:45,544 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 10:27:46,243 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 10:27:46,314 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 10:27:46,331 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 10:27:46,473 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 255.5122ms 404 
+INFO  2018-04-10 10:28:42,660 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/json 11
+INFO  2018-04-10 10:28:42,962 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (0) - ModelState is Valid
+INFO  2018-04-10 10:29:03,287 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:29:03,417 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) in 20685.2124ms
+INFO  2018-04-10 10:29:03,423 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20763.5012ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:29:10,587 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/json 11
+INFO  2018-04-10 10:29:10,598 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (0) - ModelState is Valid
+INFO  2018-04-10 10:29:15,185 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:29:15,214 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) in 4596.7953ms
+INFO  2018-04-10 10:29:15,222 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4632.1671ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:29:30,382 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/x-www-form-urlencoded 4
+INFO  2018-04-10 10:29:30,410 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (3) - ModelState is Valid
+INFO  2018-04-10 10:29:36,825 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:29:36,827 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) in 6442.0769ms
+INFO  2018-04-10 10:29:36,829 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6447.4114ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:29:46,635 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/x-www-form-urlencoded 
+INFO  2018-04-10 10:29:46,644 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 10:29:46,721 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:29:46,739 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 96.9636ms
+INFO  2018-04-10 10:29:46,742 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 106.1913ms 200 application/json; charset=utf-8
+INFO  2018-04-10 10:30:06,403 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/x-www-form-urlencoded 36
+INFO  2018-04-10 10:30:06,420 [11   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 415
+INFO  2018-04-10 10:30:06,422 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 11.62ms
+INFO  2018-04-10 10:30:06,429 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 30.9733ms 415 
+INFO  2018-04-10 10:30:53,776 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 38
+INFO  2018-04-10 10:30:53,835 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.CreateReagentInfoDto) - ModelState is Valid
+INFO  2018-04-10 10:30:53,920 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 10:30:53,923 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 142.1411ms
+INFO  2018-04-10 10:30:53,926 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 149.4685ms 200 application/json; charset=utf-8
+DEBUG 2018-04-10 14:08:32,382 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:08:32,430 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 14:08:32,447 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,456 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 14:08:32,826 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:08:32,904 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:08:32,988 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:08:33,025 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:08:33,290 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:08:33,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-04-10 14:11:44,887 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:11:44,910 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 14:11:44,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,931 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:44,935 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 14:11:45,178 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:11:45,233 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:11:45,295 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:11:45,326 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:11:45,469 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:11:45,524 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+FATAL 2018-04-10 14:11:45,832 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service Microsoft.AspNetCore.Sockets.HttpConnectionDispatcher was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional) in D:\Github\castle-windsor-ms-adapter\src\Castle.Windsor.MsDependencyInjection\ScopedWindsorServiceProvider.cs:line 55
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Builder.SocketsAppBuilderExtensions.UseSockets(IApplicationBuilder app, Action`1 callback)
+   at Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR(IApplicationBuilder app, Action`1 configure)
+   at MyDocumentManageNetCore.Web.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in D:\Repos\MyGeneDocument\MyDocumentManageNetCore.Web\Startup.cs:line 84
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.ApplicationInsights.HostingStartup.ApplicationInsightsLoggerStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.ApplicationInsights.AspNetCore.ApplicationInsightsStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+INFO  2018-04-10 14:12:56,769 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+INFO  2018-04-10 14:12:56,832 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 114.9561ms 500 text/html; charset=utf-8
+INFO  2018-04-10 14:12:56,953 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-10 14:12:56,975 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.2217ms 500 text/html; charset=utf-8
+DEBUG 2018-04-10 14:21:23,069 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:21:23,125 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 14:21:23,143 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,146 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,146 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,148 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,149 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,154 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 14:21:23,486 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:23,550 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:21:23,628 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:21:23,660 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:21:23,911 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:21:23,995 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-04-10 14:21:43,969 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:21:43,995 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-04-10 14:21:44,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,016 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,016 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,016 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,016 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,019 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-04-10 14:21:44,306 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:21:44,364 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:21:44,432 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:21:44,467 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:21:44,624 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:21:44,682 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+FATAL 2018-04-10 14:21:44,962 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service Microsoft.AspNetCore.Sockets.HttpConnectionDispatcher was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional) in D:\Github\castle-windsor-ms-adapter\src\Castle.Windsor.MsDependencyInjection\ScopedWindsorServiceProvider.cs:line 55
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Builder.SocketsAppBuilderExtensions.UseSockets(IApplicationBuilder app, Action`1 callback)
+   at Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR(IApplicationBuilder app, Action`1 configure)
+   at MyDocumentManageNetCore.Web.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in D:\Repos\MyGeneDocument\MyDocumentManageNetCore.Web\Startup.cs:line 84
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.ApplicationInsights.HostingStartup.ApplicationInsightsLoggerStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.ApplicationInsights.AspNetCore.ApplicationInsightsStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+DEBUG 2018-04-10 14:22:36,609 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:22:36,676 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-10 14:22:36,719 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,722 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,723 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,723 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,723 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:36,729 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-10 14:22:37,041 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:22:37,105 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:22:37,171 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:22:37,203 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:22:37,453 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:22:37,538 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-04-10 14:26:41,979 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:26:42,004 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-10 14:26:42,021 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,030 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-10 14:26:42,283 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:26:42,339 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:26:42,403 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:26:42,432 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:26:42,586 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:26:42,655 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+FATAL 2018-04-10 14:26:42,913 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service Microsoft.AspNetCore.Sockets.HttpConnectionDispatcher was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional) in D:\Github\castle-windsor-ms-adapter\src\Castle.Windsor.MsDependencyInjection\ScopedWindsorServiceProvider.cs:line 55
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.AspNetCore.Builder.SocketsAppBuilderExtensions.UseSockets(IApplicationBuilder app, Action`1 callback)
+   at Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR(IApplicationBuilder app, Action`1 configure)
+   at MyDocumentManageNetCore.Web.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in D:\Repos\MyGeneDocument\MyDocumentManageNetCore.Web\Startup.cs:line 84
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.ApplicationInsights.HostingStartup.ApplicationInsightsLoggerStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.ApplicationInsights.AspNetCore.ApplicationInsightsStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass3_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+INFO  2018-04-10 14:36:49,320 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+INFO  2018-04-10 14:36:49,378 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 92.5311ms 500 text/html; charset=utf-8
+INFO  2018-04-10 14:36:49,460 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-10 14:36:49,484 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.5249ms 500 text/html; charset=utf-8
+DEBUG 2018-04-10 14:40:35,896 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:40:35,955 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-10 14:40:35,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,981 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,981 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:35,986 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-10 14:40:36,307 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:40:36,374 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:40:36,440 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:40:36,471 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:40:36,701 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:40:36,783 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 14:40:37,866 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 14:40:37,963 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 14:40:37,983 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 14:40:38,203 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 370.4917ms 404 
+INFO  2018-04-10 14:40:57,419 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/CetReagentInfos application/json 
+INFO  2018-04-10 14:40:57,423 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.2064ms 404 
+INFO  2018-04-10 14:42:03,629 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/x-www-form-urlencoded 
+INFO  2018-04-10 14:42:03,910 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 14:42:04,506 [18   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 14:42:04,533 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 842.6022ms
+INFO  2018-04-10 14:42:04,537 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 907.4182ms 200 application/json; charset=utf-8
+DEBUG 2018-04-10 14:43:38,393 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:43:38,447 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-10 14:43:38,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,473 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,474 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,475 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,476 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,480 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-10 14:43:38,844 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:43:38,913 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:43:38,995 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:43:39,027 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:43:39,812 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:43:39,896 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+FATAL 2018-04-10 14:43:40,443 [1    ] soft.AspNetCore.Hosting.Internal.WebHost - Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to activate 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+INFO  2018-04-10 14:43:40,794 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+INFO  2018-04-10 14:43:40,824 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 58.855ms 500 text/html; charset=utf-8
+INFO  2018-04-10 14:43:40,897 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-10 14:43:40,910 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.7908ms 500 text/html; charset=utf-8
+DEBUG 2018-04-10 14:44:18,278 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:44:18,340 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-10 14:44:18,356 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,360 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,360 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,360 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,361 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,362 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,363 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,367 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-10 14:44:18,689 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:44:18,759 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:44:18,823 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:44:18,857 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:44:19,097 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:44:19,181 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 14:44:19,863 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 14:44:19,958 [14   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 14:44:19,977 [14   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 14:44:20,200 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 367.8029ms 404 
+INFO  2018-04-10 14:44:28,130 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/x-www-form-urlencoded 
+INFO  2018-04-10 14:44:28,428 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-10 14:44:29,056 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 14:44:29,225 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 1035.3178ms
+INFO  2018-04-10 14:44:29,254 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1099.1701ms 200 application/json; charset=utf-8
+DEBUG 2018-04-10 14:53:14,261 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-10 14:53:14,311 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-10 14:53:14,351 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,354 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,355 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,356 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,356 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,356 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,357 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,360 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-10 14:53:14,732 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-10 14:53:14,808 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-10 14:53:14,885 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-10 14:53:14,917 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-10 14:53:15,188 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-10 14:53:15,292 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-10 14:53:15,998 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-10 14:53:16,088 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-10 14:53:16,109 [12   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-10 14:53:16,334 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 372.8304ms 404 
+INFO  2018-04-10 14:54:33,691 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 36
+WARN  2018-04-10 14:54:34,214 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError() in D:\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 118
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate() in D:\Github\aspnetboilerplate\src\Abp\Runtime\Validation\Interception\MethodInvocationValidator.cs:line 89
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.<OnActionExecutionAsync>d__3.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Validation\AbpValidationActionFilter.cs:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextExceptionFilterAsync>d__23.MoveNext()
+WARN  2018-04-10 14:54:34,308 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 1 validation errors:
+WARN  2018-04-10 14:54:34,308 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - The ReagentName field is required. (ReagentName)
+INFO  2018-04-10 14:54:34,332 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-10 14:54:34,397 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 626.8104ms
+INFO  2018-04-10 14:54:34,401 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 711.1858ms 400 application/json; charset=utf-8

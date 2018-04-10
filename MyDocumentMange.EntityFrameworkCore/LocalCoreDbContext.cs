@@ -1,8 +1,8 @@
 ﻿using Abp.Dependency;
 using Abp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MyDocumentManage.Domain.Entitys;
 using MyDocumentManageNetCore.Domain.Configuration;
+using MyDocumentManageNetCore.Domain.Entitys;
 using MyDocumentManageNetCore.Domain.Web;
 using System;
 using System.Collections.Generic;
