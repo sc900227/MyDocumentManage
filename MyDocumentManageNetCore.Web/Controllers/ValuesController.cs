@@ -2,24 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Abp.Domain.Repositories;
 using Abp.Notifications;
 using Microsoft.AspNetCore.Mvc;
 using MyDocumentManageNetCore.Domain.Controllers;
+using MyDocumentManageNetCore.Domain.Entitys;
 
 namespace MyDocumentManageNetCore.Web.Controllers
 {
-    //[Route("api/[controller]")]
+    [Route("api/[controller]")]
     public class ValuesController : MyDocumentManageControllerBase
     {
         private readonly INotificationPublisher _notificationPublisher;
+        private readonly IRepository<TB_ReagentInfo, Int64> repository;
 
-        public ValuesController(INotificationPublisher notificationPublisher)
+        public ValuesController(INotificationPublisher notificationPublisher,IRepository<TB_ReagentInfo,Int64> _repository)
         {
             _notificationPublisher = notificationPublisher;
+            repository = _repository;
         }
-        public IActionResult Index()
+        public JsonResult Index()
         {
-            return Redirect("/swagger");
+            var result= repository.GetAll().OrderBy(a => a.ID).ToList();
+            return Json(result);
+            //return Redirect("/swagger");
         }
         //// GET api/values
         //[HttpGet]

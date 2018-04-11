@@ -4177,3 +4177,695 @@ WARN  2018-04-10 14:54:34,308 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter -
 INFO  2018-04-10 14:54:34,332 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 INFO  2018-04-10 14:54:34,397 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 626.8104ms
 INFO  2018-04-10 14:54:34,401 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 711.1858ms 400 application/json; charset=utf-8
+DEBUG 2018-04-11 10:05:43,913 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 10:05:43,970 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 10:05:43,987 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:43,998 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 10:05:44,375 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:05:44,453 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 10:05:44,531 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 10:05:44,564 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 10:05:44,818 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 10:05:44,921 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 10:05:45,738 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 10:05:45,826 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 10:05:45,843 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 10:05:46,058 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 352.2984ms 404 
+INFO  2018-04-11 10:06:11,900 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+INFO  2018-04-11 10:06:11,907 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.7954ms 404 
+DEBUG 2018-04-11 10:11:38,987 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 10:11:39,035 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 10:11:39,060 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,063 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,063 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,064 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,064 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,064 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,070 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 10:11:39,384 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:11:39,453 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 10:11:39,520 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 10:11:39,552 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 10:11:39,783 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 10:11:39,870 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 10:11:40,430 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 10:11:40,507 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 10:11:40,523 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 10:11:40,711 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 311.3192ms 404 
+INFO  2018-04-11 10:12:11,575 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/values  
+INFO  2018-04-11 10:12:15,990 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 10:12:23,870 [14   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 10:12:24,016 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 12395.0481ms
+ERROR 2018-04-11 10:12:24,199 [14   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLCVA6833DV5", Request id "0HLCVA6833DV5:00000002": An unhandled exception was thrown by the application.
+System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'LocalCoreDbContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ChangeTracker()
+   at Microsoft.EntityFrameworkCore.Query.CompiledQueryCacheKeyGenerator.GenerateCacheKeyCore(Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.RelationalCompiledQueryCacheKeyGenerator.GenerateCacheKeyCore(Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.RelationalCompiledQueryCacheKeyGenerator.GenerateCacheKey(Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Remotion.Linq.QueryableBase`1.System.Collections.IEnumerable.GetEnumerator()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor.ExecuteAsync(ActionContext context, JsonResult result)
+   at Microsoft.AspNetCore.Mvc.JsonResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.AspNetCore.Security.AbpSecurityHeadersMiddleware.<Invoke>d__2.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Security\AbpSecurityHeadersMiddleware.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__11.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Frame`1.<ProcessRequestsAsync>d__2.MoveNext()
+INFO  2018-04-11 10:12:24,212 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12637.6979ms 200 application/json; charset=utf-8
+INFO  2018-04-11 10:12:24,246 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 10:12:24,250 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.9968ms 404 
+INFO  2018-04-11 10:12:30,447 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/values  
+INFO  2018-04-11 10:12:34,060 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+DEBUG 2018-04-11 10:13:30,097 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 10:13:30,153 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 10:13:30,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,173 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,173 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,173 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,174 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,174 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,174 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,175 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,175 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,175 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,176 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,180 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 10:13:30,504 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:13:30,568 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 10:13:30,634 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 10:13:30,667 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 10:13:30,906 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 10:13:30,992 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 10:13:31,741 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 10:13:31,818 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 10:13:31,834 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 10:13:32,032 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 320.4778ms 404 
+INFO  2018-04-11 10:14:25,639 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/values  
+INFO  2018-04-11 10:14:28,606 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 10:14:34,700 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 10:14:34,846 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 9160.9363ms
+INFO  2018-04-11 10:14:34,853 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9210.6255ms 200 application/json; charset=utf-8
+INFO  2018-04-11 10:14:34,907 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 10:14:34,911 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2.7854ms 404 
+DEBUG 2018-04-11 10:15:20,895 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 10:15:20,954 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 10:15:20,972 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,977 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,977 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,978 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,978 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,978 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,980 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,981 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,981 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:20,986 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 10:15:21,309 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 10:15:21,372 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 10:15:21,441 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 10:15:21,472 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 10:15:21,707 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 10:15:21,787 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 10:15:22,481 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 10:15:22,561 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 10:15:22,577 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 10:15:25,266 [15   ] Microsoft.AspNetCore.Server.Kestrel      - Heartbeat took longer than "00:00:01" at "04/11/2018 02:15:25 +00:00".
+INFO  2018-04-11 10:15:25,291 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 10:15:26,479 [10   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 10:15:26,633 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 3828.9905ms
+INFO  2018-04-11 10:15:26,639 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4188.7458ms 200 application/json; charset=utf-8
+INFO  2018-04-11 10:15:26,675 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 10:15:26,685 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.5152ms 404 
+INFO  2018-04-11 10:16:20,705 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/CreateReagentInfo application/json 40
+INFO  2018-04-11 10:16:20,854 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.CreateReagentInfoDto) - ModelState is Valid
+INFO  2018-04-11 10:16:20,991 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 10:16:20,999 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.CreateReagentInfo (MyDocumentManageNetCore.Application) in 266.1828ms
+INFO  2018-04-11 10:16:21,003 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 297.9434ms 200 application/json; charset=utf-8
+INFO  2018-04-11 10:16:30,599 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfos application/json 
+INFO  2018-04-11 10:16:30,607 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 10:16:30,678 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 10:16:30,682 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfos (MyDocumentManageNetCore.Application) in 75.2261ms
+INFO  2018-04-11 10:16:30,684 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 85.0795ms 200 application/json; charset=utf-8
+INFO  2018-04-11 10:17:07,589 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/json 11
+INFO  2018-04-11 10:17:07,606 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (0) - ModelState is Valid
+INFO  2018-04-11 10:17:12,716 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 10:17:12,718 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) in 5114.1253ms
+INFO  2018-04-11 10:17:12,720 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5132.279ms 200 application/json; charset=utf-8
+INFO  2018-04-11 10:17:31,590 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/DeleteReagentInfo application/x-www-form-urlencoded 4
+INFO  2018-04-11 10:17:31,671 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) with arguments (4) - ModelState is Valid
+INFO  2018-04-11 10:17:37,788 [15   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 10:17:37,791 [15   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.DeleteReagentInfo (MyDocumentManageNetCore.Application) in 6156.3532ms
+INFO  2018-04-11 10:17:37,793 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6202.9025ms 200 application/json; charset=utf-8
+DEBUG 2018-04-11 11:45:20,600 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 11:45:20,841 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 11:45:20,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,884 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,884 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,885 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,886 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,887 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,888 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:20,891 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 11:45:22,487 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 11:45:22,565 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 11:45:22,638 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 11:45:22,670 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 11:45:22,934 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 11:45:23,039 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 11:45:23,878 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 11:45:23,971 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 11:45:23,989 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 11:52:09,902 [17   ] Microsoft.AspNetCore.Server.Kestrel      - Heartbeat took longer than "00:00:01" at "04/11/2018 03:52:09 +00:00".
+INFO  2018-04-11 11:52:09,928 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 11:52:12,434 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 11:52:12,595 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 408318.5329ms
+INFO  2018-04-11 11:52:12,598 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 408760.5396ms 200 application/json; charset=utf-8
+INFO  2018-04-11 11:52:12,646 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 11:52:12,657 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0859ms 404 
+DEBUG 2018-04-11 15:52:17,530 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 15:52:17,594 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 15:52:17,611 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,614 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,614 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,614 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,614 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,615 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,615 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,616 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,616 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,616 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,617 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:17,620 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 15:52:17,997 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:52:18,072 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 15:52:18,148 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 15:52:18,179 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 15:52:18,435 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 15:52:18,536 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 15:52:19,348 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 15:52:19,440 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 15:52:19,459 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 15:52:22,639 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 15:52:23,537 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 15:52:23,724 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 3978.374ms
+INFO  2018-04-11 15:52:23,731 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4424.1018ms 200 application/json; charset=utf-8
+INFO  2018-04-11 15:52:23,775 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 15:52:23,811 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 35.7229ms 404 
+INFO  2018-04-11 15:55:21,154 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?Sorting=ID&SkipCount=1&MaxResultCount=10 application/json 38
+INFO  2018-04-11 15:55:21,175 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20.307ms 404 
+INFO  2018-04-11 15:55:36,506 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?Sorting=ID&SkipCount=1&MaxResultCount=10 application/json 
+INFO  2018-04-11 15:55:36,625 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+DEBUG 2018-04-11 15:56:45,850 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 15:56:45,905 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 15:56:45,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,926 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:45,932 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 15:56:46,264 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 15:56:46,329 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 15:56:46,397 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 15:56:46,433 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 15:56:46,679 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 15:56:46,760 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 15:56:47,574 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 15:56:47,648 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 15:56:47,665 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 15:56:50,230 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 15:56:51,003 [10   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 15:56:51,166 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 3273.589ms
+INFO  2018-04-11 15:56:51,174 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3629.8223ms 200 application/json; charset=utf-8
+INFO  2018-04-11 15:56:51,212 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 15:56:51,225 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.5579ms 404 
+INFO  2018-04-11 15:56:54,829 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?Sorting=ID&SkipCount=1&MaxResultCount=10 application/json 
+INFO  2018-04-11 15:56:54,940 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+DEBUG 2018-04-11 16:18:22,062 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 16:18:22,123 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 16:18:22,141 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,144 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,145 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,146 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,146 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,147 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,150 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 16:18:22,481 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:18:22,547 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 16:18:22,616 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 16:18:22,646 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 16:18:22,903 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 16:18:22,989 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 16:18:23,659 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 16:18:23,739 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 16:18:23,757 [10   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 16:18:26,330 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 16:18:27,127 [10   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 16:18:27,286 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 3296.7378ms
+INFO  2018-04-11 16:18:27,299 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3669.5585ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:18:27,333 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 16:18:27,346 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.745ms 404 
+INFO  2018-04-11 16:18:32,032 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?Sorting=ID&SkipCount=1&MaxResultCount=10 application/json 
+INFO  2018-04-11 16:18:32,152 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:18:41,708 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:18:41,721 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 9644.0809ms
+INFO  2018-04-11 16:18:41,723 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9691.4767ms 200 application/json; charset=utf-8
+DEBUG 2018-04-11 16:27:13,869 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 16:27:13,925 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 16:27:13,953 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,958 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,959 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,959 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,959 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,960 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,960 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,961 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,962 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,962 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,962 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:13,966 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 16:27:14,422 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 16:27:14,496 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 16:27:14,568 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 16:27:14,601 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 16:27:14,880 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 16:27:14,979 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 16:27:15,711 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 16:27:15,805 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 16:27:15,823 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 16:27:20,340 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 16:27:21,227 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 16:27:21,419 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 5346.8401ms
+INFO  2018-04-11 16:27:21,427 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5752.436ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:27:21,471 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 16:27:21,481 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12.3703ms 404 
+INFO  2018-04-11 16:31:23,113 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/genedoc/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:31:23,230 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 213.7893ms 404 
+INFO  2018-04-11 16:31:53,079 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/genedoc/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:31:53,086 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.9069ms 404 
+INFO  2018-04-11 16:32:42,399 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/genedoc/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:32:42,407 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.6569ms 404 
+INFO  2018-04-11 16:33:24,649 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:33:25,109 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:33:25,373 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:33:25,396 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 466.372ms
+INFO  2018-04-11 16:33:25,400 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 753.3626ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:33:25,447 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 16:33:25,450 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3.9883ms 404 
+INFO  2018-04-11 16:36:11,831 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/genedoc/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:36:11,837 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4.7239ms 404 
+INFO  2018-04-11 16:36:35,633 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:36:35,640 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:36:35,653 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:36:35,656 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 17.9668ms
+INFO  2018-04-11 16:36:35,658 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27.4652ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:38:57,298 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/genedoc/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:38:57,307 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5.3827ms 404 
+INFO  2018-04-11 16:41:00,642 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:41:00,693 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 46.2306ms
+ERROR 2018-04-11 16:41:01,062 [11   ] Microsoft.AspNetCore.Server.Kestrel      - Connection id "0HLCVGO445AHG", Request id "0HLCVGO445AHG:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: A CORS policy named 'localhost' could not be found.
+   at Microsoft.AspNetCore.Mvc.Cors.CorsAuthorizationFilter.<OnAuthorizationAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.AspNetCore.Security.AbpSecurityHeadersMiddleware.<Invoke>d__2.MoveNext() in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Security\AbpSecurityHeadersMiddleware.cs:line 26
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__11.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Frame`1.<ProcessRequestsAsync>d__2.MoveNext()
+INFO  2018-04-11 16:41:01,078 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 436.8667ms 500 
+INFO  2018-04-11 16:46:09,028 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:46:09,050 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:46:09,079 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:46:09,084 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 43.953ms
+INFO  2018-04-11 16:46:09,087 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 61.1462ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:47:51,731 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:47:51,736 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:47:51,742 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:47:51,746 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 9.5996ms
+INFO  2018-04-11 16:47:51,749 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16.4425ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:48:07,708 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:48:07,714 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:48:07,725 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:48:07,727 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 14.6237ms
+INFO  2018-04-11 16:48:07,730 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.263ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:49:11,226 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:49:11,233 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:49:11,242 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:49:11,257 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 13.5619ms
+INFO  2018-04-11 16:49:11,267 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.3371ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:50:18,953 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:50:18,988 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:50:19,018 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:50:19,022 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 59.3576ms
+INFO  2018-04-11 16:50:19,028 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 73.9952ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:50:26,617 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:50:26,623 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:50:26,633 [14   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:50:26,636 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 12.1161ms
+INFO  2018-04-11 16:50:26,639 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.3826ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:50:28,445 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+asc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:50:28,449 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:50:28,454 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:50:28,457 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 7.8721ms
+INFO  2018-04-11 16:50:28,461 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15.1175ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:50:30,560 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=id+asc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:50:30,565 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:50:30,572 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:50:30,576 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 10.8044ms
+INFO  2018-04-11 16:50:30,578 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18.8941ms 200 application/json; charset=utf-8
+INFO  2018-04-11 16:50:31,604 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=id+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 16:50:31,612 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 16:50:31,617 [24   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 16:50:31,621 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 9.6188ms
+INFO  2018-04-11 16:50:31,625 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 26.7719ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:00:38,786 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+asc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:00:38,794 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:00:38,799 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:00:38,804 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 10.3593ms
+INFO  2018-04-11 17:00:38,809 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.0088ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:00:41,200 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:00:41,212 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:00:41,221 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:00:41,228 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 15.4615ms
+INFO  2018-04-11 17:00:41,233 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 30.6603ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:00:44,292 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:00:44,303 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:00:44,309 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:00:44,311 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 16.7332ms
+INFO  2018-04-11 17:00:44,316 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 21.7913ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:01:04,483 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+asc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:01:04,490 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:01:16,177 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:01:16,186 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 11695.6241ms
+INFO  2018-04-11 17:01:16,190 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11706.1914ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:01:31,543 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:01:31,554 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:02:19,991 [26   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:02:19,995 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 48447.1199ms
+INFO  2018-04-11 17:02:19,999 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 48455.3259ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:02:58,089 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+asc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:02:58,104 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:03:25,972 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:03:25,975 [26   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:03:25,978 [26   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 27885.5835ms
+INFO  2018-04-11 17:03:26,003 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 27897.3198ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:03:26,026 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:03:26,605 [29   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:03:26,607 [29   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 631.2012ms
+INFO  2018-04-11 17:03:26,611 [29   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 637.7522ms 200 application/json; charset=utf-8
+DEBUG 2018-04-11 17:14:30,013 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-04-11 17:14:30,076 [1    ] Abp.Modules.AbpModuleManager             - Found 11 ABP modules in total.
+DEBUG 2018-04-11 17:14:30,104 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Web.MyDocumentManageNetCoreWebModule, MyDocumentManageNetCore.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,108 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Domain.MyDocumentManageNetCoreDomainModule, MyDocumentManageNetCore.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentManageNetCore.Application.MyDocumentManageNetCoreApplicationModule, MyDocumentManageNetCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyDocumentMange.EntityFrameworkCore.MyDocumentMangeEntityFrameworkCoreModule, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,111 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,117 [1    ] Abp.Modules.AbpModuleManager             - 11 modules loaded.
+DEBUG 2018-04-11 17:14:30,529 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: MyDocumentMange.EntityFrameworkCore.LocalCoreDbContext, MyDocumentMange.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-04-11 17:14:30,599 [1    ] Abp.Localization.LocalizationManager     - Initializing 2 localization sources.
+DEBUG 2018-04-11 17:14:30,672 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-04-11 17:14:30,708 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-04-11 17:14:30,969 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-04-11 17:14:31,071 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-04-11 17:14:31,923 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/values  
+WARN  2018-04-11 17:14:32,057 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-04-11 17:14:32,079 [11   ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-04-11 17:14:33,888 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-04-11 17:14:34,756 [11   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-04-11 17:14:34,929 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Web.Controllers.ValuesController.Index (MyDocumentManageNetCore.Web) in 2357.9568ms
+INFO  2018-04-11 17:14:34,941 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3057.41ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:14:34,980 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/favicon.ico  
+INFO  2018-04-11 17:14:34,990 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.0489ms 404 
+INFO  2018-04-11 17:14:48,368 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:14:48,516 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:15:07,863 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:15:07,880 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 19461.1418ms
+INFO  2018-04-11 17:15:07,885 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19518.3577ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:15:15,977 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:15:15,981 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:17:20,063 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:17:20,066 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 124084.7706ms
+INFO  2018-04-11 17:17:20,068 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 124090.7508ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:18:34,423 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:18:34,426 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:18:36,017 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:18:36,027 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1593.0587ms
+INFO  2018-04-11 17:18:36,058 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1606.006ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:22:15,605 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName+desc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:22:15,611 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:22:19,564 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:22:19,591 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:22:19,593 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:22:20,411 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 4798.8943ms
+INFO  2018-04-11 17:22:20,419 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:22:20,422 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 853.2969ms
+INFO  2018-04-11 17:22:20,430 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4814.0957ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:22:20,436 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 864.4269ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:22:20,730 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:22:20,736 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:22:21,412 [19   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:22:21,415 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 681.3719ms
+INFO  2018-04-11 17:22:21,418 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 686.7286ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:22:26,626 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName%7Cdesc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:22:26,633 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:22:31,400 [19   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:22:31,402 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 4770.2963ms
+INFO  2018-04-11 17:22:31,406 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4778.9799ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:22:54,748 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName%7Cdesc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:22:54,752 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:22:56,177 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:22:56,184 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1428.489ms
+INFO  2018-04-11 17:22:56,210 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1443.6092ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:23:33,064 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:23:33,080 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:23:34,785 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:23:34,790 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1716.5307ms
+INFO  2018-04-11 17:23:34,794 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1729.1408ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:23:41,006 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName%7Cdesc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:23:41,012 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:23:50,492 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:23:50,497 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 9485.063ms
+INFO  2018-04-11 17:23:50,532 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9493.6768ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:25:09,264 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=reagentName%7Casc&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:25:09,271 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:25:19,031 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:25:19,034 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 9763.4285ms
+INFO  2018-04-11 17:25:19,039 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9773.7391ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:25:53,936 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:25:53,942 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:25:55,699 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:25:55,702 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1762.4604ms
+INFO  2018-04-11 17:25:55,707 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1767.9538ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:26:24,671 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:26:24,676 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:26:35,632 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:26:35,635 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 10958.9577ms
+INFO  2018-04-11 17:26:35,639 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10967.48ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:26:58,493 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:26:58,498 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:26:59,235 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:26:59,239 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 740.7182ms
+INFO  2018-04-11 17:26:59,241 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 747.9273ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:27:11,949 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:27:11,954 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:27:12,963 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:27:12,967 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1012.3906ms
+INFO  2018-04-11 17:27:12,971 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1035.1852ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:27:30,386 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:27:30,404 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:27:41,921 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:27:41,949 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:27:41,952 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 11562.1651ms
+INFO  2018-04-11 17:27:41,974 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11568.9419ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:27:41,976 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:27:42,724 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:27:42,726 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 798.5024ms
+INFO  2018-04-11 17:27:42,731 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 808.7556ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:27:55,208 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:27:55,215 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:28:02,066 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:28:02,068 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 6855.8044ms
+INFO  2018-04-11 17:28:02,071 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6881.8824ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:28:12,638 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:28:12,656 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:28:16,981 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:28:16,983 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 4330.9013ms
+INFO  2018-04-11 17:28:16,987 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4349.0984ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:28:24,166 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:28:24,178 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:28:27,881 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:28:27,884 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 3713.9537ms
+INFO  2018-04-11 17:28:27,887 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3726.8126ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:28:42,179 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:28:42,184 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:28:43,462 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:28:43,465 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1280.8662ms
+INFO  2018-04-11 17:28:43,469 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1288.795ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:28:55,695 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:28:55,701 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:29:00,951 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:29:00,953 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 5253.9276ms
+INFO  2018-04-11 17:29:00,959 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5267.351ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:29:35,042 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:29:35,053 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:29:36,069 [11   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:29:36,071 [11   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1019.9759ms
+INFO  2018-04-11 17:29:36,076 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1032.5425ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:30:36,255 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:30:36,268 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:30:40,691 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:30:40,693 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 4427.42ms
+INFO  2018-04-11 17:30:40,700 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4440.2264ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:31:30,581 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:31:30,591 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:31:32,605 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:31:32,607 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 2020.7612ms
+INFO  2018-04-11 17:31:32,610 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2032.2034ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:32:09,212 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:32:09,228 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:32:11,935 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:32:11,939 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 2719.8194ms
+INFO  2018-04-11 17:32:11,942 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2730.2539ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:32:23,629 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:32:23,634 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:32:29,621 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:32:29,624 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 5990.8625ms
+INFO  2018-04-11 17:32:29,627 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5998.7109ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:34:48,013 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:34:48,024 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:34:52,724 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:34:52,726 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 4704.2461ms
+INFO  2018-04-11 17:34:52,729 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4714.9717ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:35:03,369 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:35:03,380 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:35:09,679 [24   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:35:09,682 [24   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 6307.8073ms
+INFO  2018-04-11 17:35:09,687 [24   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6314.5985ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:35:12,841 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:35:12,844 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:35:18,363 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:35:18,366 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 5522.049ms
+INFO  2018-04-11 17:35:18,370 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5527.2139ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:35:36,093 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:35:36,132 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:35:37,023 [10   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:35:37,026 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 927.4889ms
+INFO  2018-04-11 17:35:37,028 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 943.8178ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:35:45,693 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:35:45,697 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:35:46,933 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:35:46,937 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 1238.8399ms
+INFO  2018-04-11 17:35:46,943 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1246.5018ms 200 application/json; charset=utf-8
+INFO  2018-04-11 17:36:47,710 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:52427/api/services/app/ReagentInfo/GetReagentInfosPage?$Sorting=ID&$SkipCount=0&$MaxResultCount=10  
+INFO  2018-04-11 17:36:47,716 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) with arguments (MyDocumentManageNetCore.Application.ReagentInfos.Dto.GetReagentInfosInput) - ModelState is Valid
+INFO  2018-04-11 17:36:56,480 [17   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-04-11 17:36:56,482 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action MyDocumentManageNetCore.Application.ReagentInfos.ReagentInfoAppService.GetReagentInfosPage (MyDocumentManageNetCore.Application) in 8768.2253ms
+INFO  2018-04-11 17:36:56,488 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8787.2656ms 200 application/json; charset=utf-8
