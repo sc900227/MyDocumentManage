@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos.Dto
 {
-    public class GetReagentInfosInput: PagedSortedAndFilteredInputDto
+    public class GetReagentInfosInput: PagedAndFilteredInputDto
     {
         
     }

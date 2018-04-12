@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Serialization;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
@@ -25,11 +26,19 @@ namespace MyDocumentManageNetCore.Web
         {
             Configuration = configuration;
         }
-        public IServiceProvider ConfigureServices(IServiceCollection services) {
+        public IServiceProvider ConfigureServices(IServiceCollection services)
+        {
             // MVC
             services.AddMvc(
                 options => options.Filters.Add(new CorsAuthorizationFilterFactory(_defaultCorsPolicyName))
-            );
+            ).AddJsonOptions(
+                op => op.SerializerSettings.ContractResolver = new DefaultContractResolver()
+                );
+            //var urls = Configuration["AppConfig:Cores"].Split(',');
+            services.AddCors(options =>
+           options.AddPolicy("AllowSameDomain",
+       builder => builder.WithOrigins("http://localhost:8082/").AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin().AllowCredentials())
+);
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             //services.AddSwaggerGen(options =>
             //{
@@ -61,7 +70,7 @@ namespace MyDocumentManageNetCore.Web
         //public void ConfigureServices(IServiceCollection services)
         //{
         //    services.AddMvc();
-            
+
         //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

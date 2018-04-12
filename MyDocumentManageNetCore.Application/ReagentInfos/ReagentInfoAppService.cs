@@ -13,46 +13,80 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MyDocumentManage.Infrastructure;
+using System.Linq.Expressions;
+using System.Net.Http;
+using Microsoft.AspNetCore.Cors;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
-    public class ReagentInfoAppService:ApplicationService,IReagentInfoAppService
+    public class ReagentInfoAppService : ApplicationService, IReagentInfoAppService
     {
         //private readonly IReagentInfoRep dapperRepository;
-        private readonly IRepository<TB_ReagentInfo,Int64> repository;
+        private readonly IRepository<TB_ReagentInfo, Int64> repository;
         //private readonly IReagentInfoRep dapperRepository;
 
         public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository)
         {
             repository = _repository;
         }
-        [HttpGet]
-        public PagedResultDto<ReagentInfoDto> GetReagentInfosPage(GetReagentInfosInput input) {
-            var query = repository.GetAll();
-            
+        [HttpPost]
+        [EnableCors("AllowSameDomain")]
+        public PagedResultDto<ReagentInfoDto> GetReagentInfosPage(GetReagentInfosInput input)
+        {
+            //帅选
+            var where = LambdaHelper.True<TB_ReagentInfo>();
+            if (input.Filters != null && input.Filters.Count > 0)
+            {
+                foreach (var item in input.Filters)
+                {
+                    where= where.And(LambdaHelper.GetContains<TB_ReagentInfo>(item.ColumName, item.ColumValue));
+                }
+            }
+            var query = repository.GetAll().Where(where);
             //排序
-            query = !string.IsNullOrEmpty(input.Sorting) ? query.OrderBy(input.Sorting) : query.OrderBy(t => t.ID);
+            if (!string.IsNullOrEmpty(input.Sorting))
+            {
+                if (input.Sorting.Contains("-"))
+                {
+                    var sort = input.Sorting.Split("-");
+                    query = sort[1] == "desc" ? query.OrderByDescending(sort[0]) : query.OrderBy(sort[0]);
+                }
+                else
+                {
+                    query = query.OrderBy(input.Sorting);
+                }
+            }
+            else
+            {
+                query = query.OrderBy(t => t.ID);
+            }
+            //query = !string.IsNullOrEmpty(input.Sorting) ? query.OrderBy(input.Sorting) : query.OrderBy(t => t.ID);
             //获取总数
-            var totalCount = query.Include(a=>a.ID).Count();
+            var totalCount = query.Include(a => a.ID).Count();
             //默认的分页方式
             //var reagentList = query.Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
 
             //ABP提供了扩展方法PageBy分页方式
             var reagentList = query.PageBy(input).ToList();
 
-            return new PagedResultDto<ReagentInfoDto>(totalCount,ObjectMapper.Map<List<ReagentInfoDto>>(reagentList));
+            var result = new PagedResultDto<ReagentInfoDto>(totalCount, ObjectMapper.Map<List<ReagentInfoDto>>(reagentList));
+            return result;
+
         }
         [HttpGet]
-        public async Task<List<ReagentInfoDto>> GetReagentInfos() {
+        public async Task<List<ReagentInfoDto>> GetReagentInfos()
+        {
             var reagentInfos = await repository.GetAllListAsync();
-            reagentInfos=reagentInfos.OrderBy(a => a.Id).ToList();
+            reagentInfos = reagentInfos.OrderBy(a => a.Id).ToList();
             return ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
         }
         [HttpPost]
-        public async Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input) {
+        public async Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input)
+        {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
-            reagentInfo.ID =reagentInfo.Id= GetMaxID() + 1;
-            var id= await repository.InsertAndGetIdAsync(reagentInfo);
+            reagentInfo.ID = reagentInfo.Id = GetMaxID() + 1;
+            var id = await repository.InsertAndGetIdAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
         [HttpPost]
@@ -63,14 +97,15 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
         [HttpPost]
-        public async Task DeleteReagentInfo(Int64 id) {
+        public async Task DeleteReagentInfo(Int64 id)
+        {
             //var reagentInfo= repository.Get(id);
             await repository.DeleteAsync(a => a.ID == id);
         }
 
         public long GetMaxID()
         {
-            Int64 maxId = repository.GetAll().OrderByDescending(a => a.Id).Select(a =>a.Id).FirstOrDefault();
+            Int64 maxId = repository.GetAll().OrderByDescending(a => a.Id).Select(a => a.Id).FirstOrDefault();
             return maxId;
         }
     }

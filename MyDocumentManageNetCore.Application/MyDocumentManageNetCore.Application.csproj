@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyDocumentManage.Infrastructure\MyDocumentManage.Infrastructure.csproj" />
     <ProjectReference Include="..\MyDocumentManageNetCore.Domain\MyDocumentManageNetCore.Domain.csproj" />
   </ItemGroup>
 

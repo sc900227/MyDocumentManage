@@ -7,7 +7,7 @@ namespace MyDocumentManageNetCore.Application.Dtos
     public class PagedSortedAndFilteredInputDto : PagedAndSortedInputDto
     {
         public string Filter { get; set; }
-        //接收DataTables的参数
+        
         public int Draw { get; set; }
         public int Length
         {
