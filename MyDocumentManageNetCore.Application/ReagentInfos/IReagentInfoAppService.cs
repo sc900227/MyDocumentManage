@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using Microsoft.AspNetCore.Mvc;
 using MyDocumentManageNetCore.Application.ReagentInfos.Dto;
 using System;
@@ -11,7 +12,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
     public interface IReagentInfoAppService: IApplicationService
     {
-        
+        PagedResultDto<ReagentInfoDto> GetReagentInfosPage(GetReagentInfosInput input);
         Task<List<ReagentInfoDto>> GetReagentInfos();
 
         

@@ -1,7 +1,13 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Domain.Repositories;
+using Abp.Linq.Extensions;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MyDocumentManage.Infrastructure;
+using MyDocumentManageNetCore.Application.GeneInfos.Dto;
+using MyDocumentManageNetCore.Application.ReagentInfos.Dto;
 using MyDocumentManageNetCore.Application.UserInfos.Dto;
 using MyDocumentManageNetCore.Domain.Entitys;
 using System;
@@ -16,10 +22,76 @@ namespace MyDocumentManageNetCore.Application.UserInfos
     {
         
         private readonly IRepository<TB_GeneInfo, Int64> repository;
-        public GeneInfoAppService(IRepository<TB_GeneInfo, Int64> _repository) {
+        private readonly IRepository<TB_ReagentInfo, Int64> repositoryReagent;
+        public GeneInfoAppService(IRepository<TB_GeneInfo, Int64> _repository, IRepository<TB_ReagentInfo, Int64> _repositoryReagent) {
             repository = _repository;
+            repositoryReagent = _repositoryReagent;
+        }
+        [HttpPost]
+        [EnableCors("AllowSameDomain")]
+        public PagedResultDto<GeneInfoDto> GetReagentInfosPage(GetGeneInfosInput input)
+        {
+            //帅选
+            var where = LambdaHelper.True<TB_GeneInfo>();
+            if (input.Filters != null && input.Filters.Count > 0)
+            {
+                foreach (var item in input.Filters)
+                {
+                    where = where.And(LambdaHelper.GetContains<TB_GeneInfo>(item.ColumName, item.ColumValue));
+                }
+            }
+            var query = repository.GetAll().Where(where);
+            //排序
+            if (!string.IsNullOrEmpty(input.Sorting))
+            {
+                if (input.Sorting.Contains("-"))
+                {
+                    var sort = input.Sorting.Split("-");
+                    query = sort[1] == "desc" ? query.OrderByDescending(sort[0]) : query.OrderBy(sort[0]);
+                }
+                else
+                {
+                    query = query.OrderBy(input.Sorting);
+                }
+            }
+            else
+            {
+                query = query.OrderBy(t => t.ID);
+            }
+            //query = !string.IsNullOrEmpty(input.Sorting) ? query.OrderBy(input.Sorting) : query.OrderBy(t => t.ID);
+            //获取总数
+            var totalCount = query.Include(a => a.ID).Count();
+            //默认的分页方式
+            //var reagentList = query.Skip(input.SkipCount).Take(input.MaxResultCount).ToList();
+
+            //ABP提供了扩展方法PageBy分页方式
+            var reagentList = query.PageBy(input).ToList();
+            var result = new PagedResultDto<GeneInfoDto>(totalCount, ObjectMapper.Map<List<GeneInfoDto>>(reagentList));
+            return result;
+
         }
         [HttpGet]
+        [EnableCors("AllowSameDomain")]
+        public async Task<List<ReagentGeneInfoDto>> GetReagentGeneInfos() {
+            var geneInfos = await repository.GetAllListAsync();
+            var reagentInfos = await repositoryReagent.GetAllListAsync();
+            var reagents = ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
+            List<ReagentGeneInfoDto> result = geneInfos.Select(a => new ReagentGeneInfoDto()
+            {
+                ReagentInfo = reagents.FirstOrDefault(r => r.Id == a.ReagentID),
+                GeneName=a.GeneName,
+                GeneTypeH=a.GeneTypeH,
+                GeneTypeM=a.GeneTypeM,
+                GeneTypeW=a.GeneTypeW,
+                GeneTypeX=a.GeneTypeX,
+                Id=a.Id,
+                TestMethod=a.TestMethod
+            }).ToList();
+            
+            return result;
+        }
+        [HttpGet]
+        [EnableCors("AllowSameDomain")]
         public async Task<List<GeneInfoDto>> GetGeneInfos()
         {
             var geneInfos = await repository.GetAllListAsync();
@@ -27,6 +99,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
             return new List<GeneInfoDto>(ObjectMapper.Map<List<GeneInfoDto>>(geneInfos));
         }
         [HttpPost]
+        [EnableCors("AllowSameDomain")]
         public async Task<GeneInfoDto> CreateGeneInfo(CreateGeneInfoDto input) {
             var geneInfo = ObjectMapper.Map<TB_GeneInfo>(input);
             geneInfo.ID = geneInfo.Id = GetMaxID() + 1;
@@ -34,14 +107,15 @@ namespace MyDocumentManageNetCore.Application.UserInfos
             return ObjectMapper.Map<GeneInfoDto>(geneInfo);
         }
         [HttpPost]
+        [EnableCors("AllowSameDomain")]
         public async Task<GeneInfoDto> UpdateGeneInfo(GeneInfoDto input) {
             var geneInfo = ObjectMapper.Map<TB_GeneInfo>(input);
             await repository.UpdateAsync(geneInfo);
             return ObjectMapper.Map<GeneInfoDto>(geneInfo);
         }
-        [HttpPost]
-        public async Task DeleteGeneInfo(GeneInfoDto input) {
-           await repository.DeleteAsync(a=>a.ID==input.Id);
+        [EnableCors("AllowSameDomain")]
+        public async Task DeleteGeneInfo(Int64 id) {
+           await repository.DeleteAsync(a=>a.ID==id);
         }
         public Int64 GetMaxID() {
             var maxId = repository.GetAll().OrderByDescending(a => a.ID).Select(a => a.ID).FirstOrDefault();

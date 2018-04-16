@@ -17,6 +17,7 @@ using MyDocumentManage.Infrastructure;
 using System.Linq.Expressions;
 using System.Net.Http;
 using Microsoft.AspNetCore.Cors;
+using Abp.Collections.Extensions;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
@@ -40,7 +41,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             {
                 foreach (var item in input.Filters)
                 {
-                    where= where.And(LambdaHelper.GetContains<TB_ReagentInfo>(item.ColumName, item.ColumValue));
+                    where = where.And(LambdaHelper.GetContains<TB_ReagentInfo>(item.ColumName, item.ColumValue));
                 }
             }
             var query = repository.GetAll().Where(where);
@@ -69,7 +70,6 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
 
             //ABP提供了扩展方法PageBy分页方式
             var reagentList = query.PageBy(input).ToList();
-
             var result = new PagedResultDto<ReagentInfoDto>(totalCount, ObjectMapper.Map<List<ReagentInfoDto>>(reagentList));
             return result;
 
@@ -82,6 +82,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             return ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
         }
         [HttpPost]
+        [EnableCors("AllowSameDomain")]
         public async Task<ReagentInfoDto> CreateReagentInfo(CreateReagentInfoDto input)
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
@@ -90,13 +91,15 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
         [HttpPost]
+        [EnableCors("AllowSameDomain")]
         public async Task<ReagentInfoDto> UpdateReagentInfo(ReagentInfoDto input)
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             await repository.UpdateAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
-        [HttpPost]
+        
+        [EnableCors("AllowSameDomain")]
         public async Task DeleteReagentInfo(Int64 id)
         {
             //var reagentInfo= repository.Get(id);
@@ -108,5 +111,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             Int64 maxId = repository.GetAll().OrderByDescending(a => a.Id).Select(a => a.Id).FirstOrDefault();
             return maxId;
         }
+
+       
     }
 }

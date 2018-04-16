@@ -41,22 +41,22 @@ namespace MyDocumentManage.Domain.Entitys
         /// 基因型未知
         /// </summary>
         public string GeneTypeX { get; set; }
-        /// <summary>
-        /// 基因型名称简写(野生)
-        /// </summary>
-        public string GeneTypeWShort { get; set; }
-        /// <summary>
-        /// 基因型名称简写(杂合)
-        /// </summary>
-        public string GeneTypeHShort { get; set; }
-        /// <summary>
-        /// 基因型名称简写(突变)
-        /// </summary>
-        public string GeneTypeMShort { get; set; }
-        /// <summary>
-        /// 基因型名称简写(未知)
-        /// </summary>
-        public string GeneTypeXShort { get; set; }
+        ///// <summary>
+        ///// 基因型名称简写(野生)
+        ///// </summary>
+        //public string GeneTypeWShort { get; set; }
+        ///// <summary>
+        ///// 基因型名称简写(杂合)
+        ///// </summary>
+        //public string GeneTypeHShort { get; set; }
+        ///// <summary>
+        ///// 基因型名称简写(突变)
+        ///// </summary>
+        //public string GeneTypeMShort { get; set; }
+        ///// <summary>
+        ///// 基因型名称简写(未知)
+        ///// </summary>
+        //public string GeneTypeXShort { get; set; }
         /// <summary>
         /// 试剂ID
         /// </summary>

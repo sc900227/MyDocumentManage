@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using MyDocumentManageNetCore.Application;
 using MyDocumentManageNetCore.Domain;
 using MyDocumentManageNetCore.Domain.Configuration;
-using MyDocumentManageNetCoreTest.Application;
 using MyDocumentMange.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -36,7 +36,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MyDocumentManageNetCore.Application\MyDocumentManageNetCore.Application.csproj" />
     <ProjectReference Include="..\MyDocumentManageNetCore.Domain\MyDocumentManageNetCore.Domain.csproj" />
-    <ProjectReference Include="..\MyDocumentManageNetCoreTest.Application\MyDocumentManageNetCoreTest.Application.csproj" />
     <ProjectReference Include="..\MyDocumentMange.EntityFrameworkCore\MyDocumentMange.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
