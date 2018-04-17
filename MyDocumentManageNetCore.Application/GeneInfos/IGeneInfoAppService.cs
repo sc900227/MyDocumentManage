@@ -13,7 +13,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
 {
     public interface IGeneInfoAppService: IApplicationService
     {
-        Task<List<ReagentGeneInfoDto>> GetReagentGeneInfos();
+        
         PagedResultDto<GeneInfoDto> GetReagentInfosPage(GetGeneInfosInput input);
         Task<List<GeneInfoDto>> GetGeneInfos();
         

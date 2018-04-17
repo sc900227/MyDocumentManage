@@ -18,6 +18,7 @@ using System.Linq.Expressions;
 using System.Net.Http;
 using Microsoft.AspNetCore.Cors;
 using Abp.Collections.Extensions;
+using MyDocumentManageNetCore.Application.UserInfos.Dto;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
@@ -26,10 +27,12 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         //private readonly IReagentInfoRep dapperRepository;
         private readonly IRepository<TB_ReagentInfo, Int64> repository;
         //private readonly IReagentInfoRep dapperRepository;
+        private readonly IRepository<TB_GeneInfo, Int64> geneInfoRepository;
 
-        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository)
+        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository,IRepository<TB_GeneInfo,Int64> _geneInfoRepository)
         {
             repository = _repository;
+            geneInfoRepository = _geneInfoRepository;
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
@@ -73,6 +76,24 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             var result = new PagedResultDto<ReagentInfoDto>(totalCount, ObjectMapper.Map<List<ReagentInfoDto>>(reagentList));
             return result;
 
+        }
+        [HttpGet]
+        [EnableCors("AllowSameDomain")]
+        public async Task<List<ReagentGeneInfoDto>> GetReagentGeneInfos()
+        {
+            var reagentInfos = await repository.GetAllListAsync();
+            var reagents = ObjectMapper.Map<List<ReagentGeneInfoDto>>(reagentInfos).OrderBy(a=>a.Id).ToList();
+            var geneInfos =await geneInfoRepository.GetAllListAsync();
+            var genes = ObjectMapper.Map<List<GeneInfoDto>>(geneInfos);
+            reagents.ForEach(a => a.GeneInfos = genes.Where(g => g.ReagentID == a.Id).OrderBy(t=>t.Id).ToList());
+            //if (reagents!=null&&reagents.Count>0)
+            //{
+            //    foreach (var item in reagents)
+            //    {
+            //        item.GeneInfos = genes.Where(a => a.ReagentID == item.Id).ToList();
+            //    }
+            //}
+            return reagents;
         }
         [HttpGet]
         public async Task<List<ReagentInfoDto>> GetReagentInfos()

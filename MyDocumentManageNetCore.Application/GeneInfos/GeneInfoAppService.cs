@@ -70,26 +70,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
             return result;
 
         }
-        [HttpGet]
-        [EnableCors("AllowSameDomain")]
-        public async Task<List<ReagentGeneInfoDto>> GetReagentGeneInfos() {
-            var geneInfos = await repository.GetAllListAsync();
-            var reagentInfos = await repositoryReagent.GetAllListAsync();
-            var reagents = ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfos);
-            List<ReagentGeneInfoDto> result = geneInfos.Select(a => new ReagentGeneInfoDto()
-            {
-                ReagentInfo = reagents.FirstOrDefault(r => r.Id == a.ReagentID),
-                GeneName=a.GeneName,
-                GeneTypeH=a.GeneTypeH,
-                GeneTypeM=a.GeneTypeM,
-                GeneTypeW=a.GeneTypeW,
-                GeneTypeX=a.GeneTypeX,
-                Id=a.Id,
-                TestMethod=a.TestMethod
-            }).ToList();
-            
-            return result;
-        }
+        
         [HttpGet]
         [EnableCors("AllowSameDomain")]
         public async Task<List<GeneInfoDto>> GetGeneInfos()
