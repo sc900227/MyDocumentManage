@@ -16,6 +16,7 @@ namespace MyDocumentMange.EntityFrameworkCore
         public virtual DbSet<TB_GeneInfo> GeneInfo { get; set; }
         public virtual DbSet<TB_GeneTypeResult> GeneTypeResult { get; set; }
         public virtual DbSet<TB_ReagentInfo> ReagentInfo { get; set; }
+        public virtual DbSet<TB_GeneTestResult> GeneTestResult { get; set; }
         
         public LocalCoreDbContext() : base(IocManager.Instance.Resolve<LocalDbContextOption>().GetDbContextOption()) { }
     }

@@ -14,6 +14,7 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults.Dto
             CreateMap<CreateGeneTypeResultDto, TB_GeneTypeResult>();
             CreateMap<TB_GeneTypeResult, GeneTypeResultDto>();
             CreateMap<GeneTypeResultDto, TB_GeneTypeResult>();
+            CreateMap<TB_GeneTypeResult, GeneTypeTestResultDto>().ForMember(dto => dto.GeneTestResults, opt => opt.Ignore());
         }
     }
 }

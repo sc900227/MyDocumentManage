@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyDocumentManage.Infrastructure;
+using MyDocumentManageNetCore.Application.GeneTestResults.Dto;
 using MyDocumentManageNetCore.Application.GeneTypeResults.Dto;
 using MyDocumentManageNetCore.Domain.Entitys;
 using System;
@@ -19,8 +20,21 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
     public class GeneTypeResultAppService : ApplicationService, IGeneTypeResultAppService
     {
         private readonly IRepository<TB_GeneTypeResult, Int64> repository;
-        public GeneTypeResultAppService(IRepository<TB_GeneTypeResult,Int64> _repository) {
+        private readonly IRepository<TB_GeneTestResult, Int64> geneTestRepository;
+        public GeneTypeResultAppService(IRepository<TB_GeneTypeResult,Int64> _repository, IRepository<TB_GeneTestResult, Int64> _geneTestRepository) {
             repository = _repository;
+            geneTestRepository = _geneTestRepository;
+        }
+        [HttpGet]
+        [EnableCors("AllowSameDomain")]
+        public List<GeneTypeTestResultDto> GetGeneTypeTestResults() {
+            var geneTypeResults = repository.GetAll().OrderBy(a => a.ID).ToList();
+            var geneTypeTestResults = ObjectMapper.Map<List<GeneTypeTestResultDto>>(geneTypeResults);
+
+            var geneTestResults = geneTestRepository.GetAll().OrderBy(a => a.ID).ToList();
+            var geneTests = ObjectMapper.Map<List<GeneTestResultDto>>(geneTestResults);
+            geneTypeTestResults.ForEach(a => a.GeneTestResults = geneTests.Where(g => g.GeneTypeResultID == a.Id).OrderBy(g => g.Id).ToList());
+            return geneTypeTestResults;
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
