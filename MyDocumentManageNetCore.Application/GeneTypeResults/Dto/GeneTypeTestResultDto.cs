@@ -13,6 +13,10 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults.Dto
         /// </summary>
         public Int64 ReagentID { get; set; }
         /// <summary>
+        /// 试剂名称
+        /// </summary>
+        public string ReagmentName { get; set; }
+        /// <summary>
         /// 基因检测结果
         /// </summary>
         public List<GeneTestResultDto> GeneTestResults { get; set; }

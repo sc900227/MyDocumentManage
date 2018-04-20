@@ -15,7 +15,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
     {
         
         PagedResultDto<GeneInfoDto> GetReagentInfosPage(GetGeneInfosInput input);
-        Task<List<GeneInfoDto>> GetGeneInfos();
+        Task<List<GeneInfoDto>> GetGeneInfos(Int64 reagentId);
         
         Task<GeneInfoDto> CreateGeneInfo(CreateGeneInfoDto input);
 

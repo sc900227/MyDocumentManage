@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyDocumentManage.Infrastructure;
+using MyDocumentManageNetCore.Application.Dtos;
 using MyDocumentManageNetCore.Application.GeneInfos.Dto;
 using MyDocumentManageNetCore.Application.ReagentInfos.Dto;
 using MyDocumentManageNetCore.Application.UserInfos.Dto;
@@ -37,6 +38,8 @@ namespace MyDocumentManageNetCore.Application.UserInfos
             {
                 foreach (var item in input.Filters)
                 {
+                    if (item.ColumName == "GeneName")
+                        item.ColumValue = item.ColumValue.ToUpper();
                     where = where.And(LambdaHelper.GetContains<TB_GeneInfo>(item.ColumName, item.ColumValue));
                 }
             }
@@ -70,12 +73,28 @@ namespace MyDocumentManageNetCore.Application.UserInfos
             return result;
 
         }
-        
+        [HttpPost]
+        [EnableCors("AllowSameDomain")]
+        public async Task<List<GeneInfoDto>> GetGeneInfosFilter(List<FilterInputDto> input) {
+            //帅选
+            var where = LambdaHelper.True<TB_GeneInfo>();
+            if (input != null && input.Count > 0)
+            {
+                foreach (var item in input)
+                {
+                    if (item.ColumName == "GeneName")
+                        item.ColumValue = item.ColumValue.ToUpper();
+                    where = where.And(LambdaHelper.CreateEqual<TB_GeneInfo>(item.ColumName, item.ColumValue));
+                }
+            }
+            var geneInfos = await repository.GetAllListAsync(where);
+            return ObjectMapper.Map<List<GeneInfoDto>>(geneInfos);
+        } 
         [HttpGet]
         [EnableCors("AllowSameDomain")]
-        public async Task<List<GeneInfoDto>> GetGeneInfos()
+        public async Task<List<GeneInfoDto>> GetGeneInfos(Int64 reagentId=-1)
         {
-            var geneInfos = await repository.GetAllListAsync();
+            var geneInfos = reagentId == -1? await repository.GetAllListAsync(): await repository.GetAllListAsync(a=>a.ReagentID== reagentId);
             geneInfos = geneInfos.OrderBy(a => a.ID).ToList();
             return new List<GeneInfoDto>(ObjectMapper.Map<List<GeneInfoDto>>(geneInfos));
         }
@@ -84,6 +103,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
         public async Task<GeneInfoDto> CreateGeneInfo(CreateGeneInfoDto input) {
             var geneInfo = ObjectMapper.Map<TB_GeneInfo>(input);
             geneInfo.ID = geneInfo.Id = GetMaxID() + 1;
+            geneInfo.GeneName = geneInfo.GeneName.ToUpper();
             Int64 id= await repository.InsertAndGetIdAsync(geneInfo);
             return ObjectMapper.Map<GeneInfoDto>(geneInfo);
         }

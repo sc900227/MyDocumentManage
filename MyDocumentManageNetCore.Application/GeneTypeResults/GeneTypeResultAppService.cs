@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyDocumentManage.Infrastructure;
+using MyDocumentManageNetCore.Application.GeneTestResults;
 using MyDocumentManageNetCore.Application.GeneTestResults.Dto;
 using MyDocumentManageNetCore.Application.GeneTypeResults.Dto;
 using MyDocumentManageNetCore.Domain.Entitys;
@@ -21,19 +22,27 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
     {
         private readonly IRepository<TB_GeneTypeResult, Int64> repository;
         private readonly IRepository<TB_GeneTestResult, Int64> geneTestRepository;
-        public GeneTypeResultAppService(IRepository<TB_GeneTypeResult,Int64> _repository, IRepository<TB_GeneTestResult, Int64> _geneTestRepository) {
+        private readonly IGeneTestResultAppService geneTestResultAppService;
+        private readonly IRepository<TB_ReagentInfo, Int64> reagentRepository;
+        public GeneTypeResultAppService(IRepository<TB_GeneTypeResult,Int64> _repository, IRepository<TB_GeneTestResult, Int64> _geneTestRepository, IGeneTestResultAppService _geneTestResultAppService, IRepository<TB_ReagentInfo, Int64> _reagentRepository) {
             repository = _repository;
             geneTestRepository = _geneTestRepository;
+            geneTestResultAppService = _geneTestResultAppService;
+            reagentRepository = _reagentRepository;
         }
         [HttpGet]
         [EnableCors("AllowSameDomain")]
-        public List<GeneTypeTestResultDto> GetGeneTypeTestResults() {
-            var geneTypeResults = repository.GetAll().OrderBy(a => a.ID).ToList();
+        public async Task<List<GeneTypeTestResultDto>> GetGeneTypeTestResults() {
+            var geneTypeResults = await repository.GetAllListAsync();
+            geneTypeResults = geneTypeResults.OrderBy(a => a.Id).ToList();
             var geneTypeTestResults = ObjectMapper.Map<List<GeneTypeTestResultDto>>(geneTypeResults);
 
-            var geneTestResults = geneTestRepository.GetAll().OrderBy(a => a.ID).ToList();
-            var geneTests = ObjectMapper.Map<List<GeneTestResultDto>>(geneTestResults);
-            geneTypeTestResults.ForEach(a => a.GeneTestResults = geneTests.Where(g => g.GeneTypeResultID == a.Id).OrderBy(g => g.Id).ToList());
+            //var geneTestResults = await geneTestResultAppService.GetGeneTestResults(); //geneTestRepository.GetAll().OrderBy(a => a.ID).ToList();
+            //var geneTests = ObjectMapper.Map<List<GeneTestResultDto>>(geneTestResults);
+            geneTypeTestResults.ForEach(a => {
+                a.GeneTestResults = geneTestResultAppService.GetGeneTestResults(a.Id).Result;
+                a.ReagmentName = reagentRepository.FirstOrDefault(r => r.ID == a.ReagentID).ReagentName;
+                });
             return geneTypeTestResults;
         }
         [HttpPost]

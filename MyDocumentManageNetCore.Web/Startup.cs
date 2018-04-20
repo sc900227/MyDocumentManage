@@ -22,6 +22,7 @@ namespace MyDocumentManageNetCore.Web
     public class Startup
     {
         private const string _defaultCorsPolicyName = "localhost";
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -34,11 +35,11 @@ namespace MyDocumentManageNetCore.Web
             ).AddJsonOptions(
                 op => op.SerializerSettings.ContractResolver = new DefaultContractResolver()
                 );
-            //var urls = Configuration["AppConfig:Cores"].Split(',');
+            var urls = Configuration.GetSection("App").GetValue<string>("CorsOrigins");
             services.AddCors(options =>
            options.AddPolicy("AllowSameDomain",
-       builder => builder.WithOrigins("http://localhost:8082/").AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin().AllowCredentials())
-);
+           builder => builder.WithOrigins(urls).AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin().AllowCredentials())
+           );
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             //services.AddSwaggerGen(options =>
             //{
@@ -64,7 +65,7 @@ namespace MyDocumentManageNetCore.Web
                 )
             );
         }
-        public IConfiguration Configuration { get; }
+       
 
         // This method gets called by the runtime. Use this method to add services to the container.
         //public void ConfigureServices(IServiceCollection services)

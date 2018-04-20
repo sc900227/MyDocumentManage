@@ -40,12 +40,12 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults
         }
         [HttpGet]
         [EnableCors("AllowSameDomain")]
-        public async Task<List<GeneTestResultDto>> GetGeneTestResults()
+        public async Task<List<GeneTestResultDto>> GetGeneTestResults(Int64 geneTypeResultId=-1)
         {
-            var geneTestResults=await repository.GetAllListAsync();
+            var geneTestResults= geneTypeResultId==-1? await repository.GetAllListAsync():await repository.GetAllListAsync(a=>a.GeneTypeResultID==geneTypeResultId);
             geneTestResults = geneTestResults.OrderBy(a => a.ID).ToList();
             var geneTests = ObjectMapper.Map<List<GeneTestResultDto>>(geneTestResults);
-            geneTests.ForEach(a => a.GeneName = geneRepository.Get(a.GeneID).GeneName);
+            geneTests.ForEach(a => a.GeneName = geneRepository.FirstOrDefault(g=>g.ID==a.GeneID).GeneName);
             return new List<GeneTestResultDto>(geneTests);
         }
         [HttpPost]

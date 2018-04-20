@@ -19,6 +19,7 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Cors;
 using Abp.Collections.Extensions;
 using MyDocumentManageNetCore.Application.UserInfos.Dto;
+using MyDocumentManageNetCore.Application.UserInfos;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
@@ -28,11 +29,13 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         private readonly IRepository<TB_ReagentInfo, Int64> repository;
         //private readonly IReagentInfoRep dapperRepository;
         private readonly IRepository<TB_GeneInfo, Int64> geneInfoRepository;
+        private readonly IGeneInfoAppService geneInfoAppService;
 
-        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository,IRepository<TB_GeneInfo,Int64> _geneInfoRepository)
+        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository,IRepository<TB_GeneInfo,Int64> _geneInfoRepository, IGeneInfoAppService _geneInfoAppService)
         {
             repository = _repository;
             geneInfoRepository = _geneInfoRepository;
+            geneInfoAppService = _geneInfoAppService;
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
@@ -44,6 +47,8 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             {
                 foreach (var item in input.Filters)
                 {
+                    if (item.ColumName == "ReagentName")
+                        item.ColumValue = item.ColumValue.ToUpper();
                     where = where.And(LambdaHelper.GetContains<TB_ReagentInfo>(item.ColumName, item.ColumValue));
                 }
             }
@@ -83,16 +88,9 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         {
             var reagentInfos = await repository.GetAllListAsync();
             var reagents = ObjectMapper.Map<List<ReagentGeneInfoDto>>(reagentInfos).OrderBy(a=>a.Id).ToList();
-            var geneInfos =await geneInfoRepository.GetAllListAsync();
-            var genes = ObjectMapper.Map<List<GeneInfoDto>>(geneInfos);
-            reagents.ForEach(a => a.GeneInfos = genes.Where(g => g.ReagentID == a.Id).OrderBy(t=>t.Id).ToList());
-            //if (reagents!=null&&reagents.Count>0)
-            //{
-            //    foreach (var item in reagents)
-            //    {
-            //        item.GeneInfos = genes.Where(a => a.ReagentID == item.Id).ToList();
-            //    }
-            //}
+            
+            reagents.ForEach(a => a.GeneInfos = geneInfoAppService.GetGeneInfos(a.Id).Result);
+            
             return reagents;
         }
         [HttpGet]
@@ -108,6 +106,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         {
             var reagentInfo = ObjectMapper.Map<TB_ReagentInfo>(input);
             reagentInfo.ID = reagentInfo.Id = GetMaxID() + 1;
+            input.ReagentName = input.ReagentName.ToUpper();
             var id = await repository.InsertAndGetIdAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
