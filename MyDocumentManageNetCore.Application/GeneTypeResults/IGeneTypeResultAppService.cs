@@ -11,7 +11,7 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
 {
     public interface IGeneTypeResultAppService: IApplicationService
     {
-        
+        Task<List<GeneTypeTestResultDto>> GetGeneTypeTestResults(Int64 reagentId);
         Task<List<GeneTypeResultDto>> GetGeneTypeResults();
         
         Task<GeneTypeResultDto> CreateGeneTypeResult(CreateGeneTypeResultDto input);

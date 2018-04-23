@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Cors;
 using Abp.Collections.Extensions;
 using MyDocumentManageNetCore.Application.UserInfos.Dto;
 using MyDocumentManageNetCore.Application.UserInfos;
+using MyDocumentManageNetCore.Application.GeneTypeResults;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
@@ -30,12 +31,26 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         //private readonly IReagentInfoRep dapperRepository;
         private readonly IRepository<TB_GeneInfo, Int64> geneInfoRepository;
         private readonly IGeneInfoAppService geneInfoAppService;
+        private readonly IGeneTypeResultAppService geneTypeResultAppService;
 
-        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository,IRepository<TB_GeneInfo,Int64> _geneInfoRepository, IGeneInfoAppService _geneInfoAppService)
+        public ReagentInfoAppService(IRepository<TB_ReagentInfo, Int64> _repository,IRepository<TB_GeneInfo,Int64> _geneInfoRepository, IGeneInfoAppService _geneInfoAppService, IGeneTypeResultAppService _geneTypeResultAppService)
         {
             repository = _repository;
             geneInfoRepository = _geneInfoRepository;
             geneInfoAppService = _geneInfoAppService;
+            geneTypeResultAppService = _geneTypeResultAppService;
+        }
+        [HttpGet]
+        [EnableCors("AllowSameDomain")]
+        public async Task<List<ReagentGeneTypeTestResultDto>> GetReagentGeneTypeTestResults() {
+            var reagentInfo = await repository.GetAllListAsync();
+            var reagentInfoDto= ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfo);
+            var reagentGeneTypeTestResults = ObjectMapper.Map<List<ReagentGeneTypeTestResultDto>>(reagentInfoDto);
+            reagentGeneTypeTestResults.ForEach(a =>
+            {
+                a.GeneTypeTestResults =geneTypeResultAppService.GetGeneTypeTestResults(a.Id).Result;
+            });
+            return reagentGeneTypeTestResults;
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]

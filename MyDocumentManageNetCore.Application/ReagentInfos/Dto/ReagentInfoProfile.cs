@@ -15,6 +15,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos.Dto
             CreateMap<ReagentInfoDto,TB_ReagentInfo>();
             CreateMap<TB_ReagentInfo, ReagentInfoDto>();
             CreateMap<TB_ReagentInfo, ReagentGeneInfoDto>().ForMember(dto => dto.GeneInfos, opt => opt.Ignore());
+            CreateMap<ReagentInfoDto, ReagentGeneTypeTestResultDto>().ForMember(dto => dto.GeneTypeTestResults, opt => opt.Ignore());
         }
     }
 }
