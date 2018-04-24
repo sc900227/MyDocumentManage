@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MyDocumentManageNetCore.Application.GeneInfos.Dto;
+using MyDocumentManageNetCore.Application.GeneTestResults.Dto;
 using MyDocumentManageNetCore.Application.ReagentInfos.Dto;
 using MyDocumentManageNetCore.Domain.Entitys;
 using System;
@@ -17,6 +18,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos.Dto
             CreateMap<GeneInfoDto, TB_GeneInfo>();
             CreateMap<CreateGeneInfoDto, TB_GeneInfo>();
             CreateMap<TB_GeneInfo, CreateGeneInfoDto>();
+            CreateMap<TB_GeneInfo, GeneTestResultDto>().ForMember(dto => dto.GeneID, opt => opt.MapFrom(g => g.Id)).ForMember(dto => dto.Id, opt => opt.MapFrom(g => g.Id)).ForMember(dto=>  dto.GeneTypeResultID ,opt=>opt.Ignore()).ForMember(dto => dto.GeneTypeShortName, opt => opt.Ignore());
             //CreateMap<TB_GeneInfo, ReagentInfoDto>().ForMember(r => r.Id, opt => opt.MapFrom(t => t.ReagentID));
             //CreateMap<TB_GeneInfo, ReagentGeneInfoDto>()
             //    .ForMember(

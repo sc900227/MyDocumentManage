@@ -31,6 +31,23 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
             geneTestResultAppService = _geneTestResultAppService;
             reagentRepository = _reagentRepository;
         }
+        [HttpPost]
+        [EnableCors("AllowSameDomain")]
+        public async Task<GeneTypeTestResultDto> CreateGeneTypeTestResult(GeneTypeTestResultDto input) {
+            var geneTypeResult = ObjectMapper.Map<TB_GeneTypeResult>(input);
+            var geneTestResults = ObjectMapper.Map<List<TB_GeneTestResult>>(input.GeneTestResults);
+            geneTypeResult.ID = geneTypeResult.Id = GetMaxID() + 1;
+            Int64 geneTypeResulyId=await repository.InsertAndGetIdAsync(geneTypeResult);
+
+            var createGeneTests=ObjectMapper.Map<List<CreateGeneTestResultDto>>(geneTestResults);
+            createGeneTests.ForEach(a => a.GeneTypeResultID = geneTypeResulyId);
+            
+
+            GeneTypeTestResultDto result = ObjectMapper.Map<GeneTypeTestResultDto>(geneTypeResult);
+            result.GeneTestResults= await geneTestResultAppService.CreateGeneTestResults(createGeneTests);
+            //var results=await GetGeneTypeTestResults(input.ReagentID);
+            return result;
+        }
         [HttpGet]
         [EnableCors("AllowSameDomain")]
         public async Task<List<GeneTypeTestResultDto>> GetGeneTypeTestResults(Int64 reagentId=-1)
@@ -89,20 +106,33 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
             return result;
         }
         [HttpPost]
+        [EnableCors("AllowSameDomain")]
         public async Task<GeneTypeResultDto> CreateGeneTypeResult(CreateGeneTypeResultDto input)
         {
             var info = ObjectMapper.Map<TB_GeneTypeResult>(input);
-            info.ID = info.Id = input.Id;
+            info.ID = info.Id = GetMaxID() + 1;
             var infoId = await repository.InsertAndGetIdAsync(info);
             return ObjectMapper.Map<GeneTypeResultDto>(info);
 
         }
-        [HttpPost]
-        public async Task DeleteGeneTypeResult(GeneTypeResultDto input)
+        public async Task DeleteGeneTypeResultByReagentId(Int64 reagentId) {
+            var geneTypeResults=await  repository.GetAllListAsync(a => a.ReagentID == reagentId);
+            if (geneTypeResults!=null&&geneTypeResults.Count>0)
+            {
+                foreach (var item in geneTypeResults)
+                {
+                   await DeleteGeneTypeResult(item.Id);
+                }
+            }
+        }
+        [EnableCors("AllowSameDomain")]
+        public async Task DeleteGeneTypeResult(Int64 id)
         {
-            await repository.DeleteAsync(a => a.ID == input.Id);
+            await repository.DeleteAsync(a => a.ID ==id);
+            await geneTestRepository.DeleteAsync(a => a.GeneTypeResultID == id);
         }
         [HttpGet]
+        [EnableCors("AllowSameDomain")]
         public async Task<List<GeneTypeResultDto>> GetGeneTypeResults()
         {
             var info = await repository.GetAllListAsync();
@@ -116,6 +146,7 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
             return maxId;
         }
         [HttpPost]
+        [EnableCors("AllowSameDomain")]
         public async Task<GeneTypeResultDto> UpdateGeneTypeResult(GeneTypeResultDto input)
         {
             var info = ObjectMapper.Map<TB_GeneTypeResult>(input);

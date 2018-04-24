@@ -10,16 +10,17 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults
 {
     public interface IGeneTestResultAppService: IApplicationService
     {
+        Task<List<GeneTestResultDto>> CreateGeneTestResults(List<CreateGeneTestResultDto> input);
         Task<List<GeneTestResultDto>> GetGeneTestResults(Int64 geneTypeResultId);
-        PagedResultDto<GeneTestResultDto> GetReagentInfosPage(GetGeneTestResultsInput input);
+        PagedResultDto<GeneTestResultDto> GetGeneTestResultsPage(GetGeneTestResultsInput input);
         
 
 
-        Task<GeneTestResultDto> CreateReagentInfo(CreateGeneTestResultDto input);
+        Task<GeneTestResultDto> CreateGeneTestResult(CreateGeneTestResultDto input);
 
 
 
-        Task<GeneTestResultDto> UpdateReagentInfo(GeneTestResultDto input);
+        Task<GeneTestResultDto> UpdateGeneTestResult(GeneTestResultDto input);
 
         Task DeleteGeneTestResult(Int64 id);
     }

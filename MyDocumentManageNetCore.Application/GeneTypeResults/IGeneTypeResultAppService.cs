@@ -20,6 +20,7 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
         Task<GeneTypeResultDto> UpdateGeneTypeResult(GeneTypeResultDto input);
 
         
-        Task DeleteGeneTypeResult(GeneTypeResultDto input);
+        Task DeleteGeneTypeResult(Int64 id);
+        Task DeleteGeneTypeResultByReagentId(Int64 reagentId);
     }
 }

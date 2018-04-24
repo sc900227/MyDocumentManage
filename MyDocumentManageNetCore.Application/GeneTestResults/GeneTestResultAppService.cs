@@ -24,9 +24,20 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults
             repository = _repository;
             geneRepository = _geneRepository;
         }
+        public async Task<List<GeneTestResultDto>> CreateGeneTestResults(List<CreateGeneTestResultDto> input) {
+            var geneTestResults = ObjectMapper.Map<List<TB_GeneTestResult>>(input);
+            var id = GetMaxID();
+            foreach (var item in geneTestResults)
+            {
+                id++;
+                item.ID = item.Id = id;
+                await repository.InsertAsync(item);
+            }
+            return ObjectMapper.Map<List<GeneTestResultDto>>(geneTestResults);
+        }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
-        public async Task<GeneTestResultDto> CreateReagentInfo(CreateGeneTestResultDto input)
+        public async Task<GeneTestResultDto> CreateGeneTestResult(CreateGeneTestResultDto input)
         {
             var geneTestResult = ObjectMapper.Map<TB_GeneTestResult>(input);
             geneTestResult.ID = geneTestResult.Id = GetMaxID() + 1;
@@ -50,7 +61,7 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
-        public async Task<GeneTestResultDto> UpdateReagentInfo(GeneTestResultDto input)
+        public async Task<GeneTestResultDto> UpdateGeneTestResult(GeneTestResultDto input)
         {
             var geneTestResult = ObjectMapper.Map<TB_GeneTestResult>(input);
             await repository.UpdateAsync(geneTestResult);
@@ -58,7 +69,7 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
-        public PagedResultDto<GeneTestResultDto> GetReagentInfosPage(GetGeneTestResultsInput input)
+        public PagedResultDto<GeneTestResultDto> GetGeneTestResultsPage(GetGeneTestResultsInput input)
         {
             //帅选
             var where = LambdaHelper.True<TB_GeneTestResult>();

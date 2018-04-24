@@ -10,6 +10,7 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults.Dto
     {
         public GeneTestResultProfile() {
             CreateMap<CreateGeneTestResultDto, TB_GeneTestResult>();
+            CreateMap<TB_GeneTestResult, CreateGeneTestResultDto>();
             CreateMap<TB_GeneTestResult, GeneTestResultDto>().ForMember(dto=>dto.GeneName,opt=>opt.Ignore());
             CreateMap<GeneTestResultDto, TB_GeneTestResult>();
         }

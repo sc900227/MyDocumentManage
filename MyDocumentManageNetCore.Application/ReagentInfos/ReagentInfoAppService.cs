@@ -21,6 +21,8 @@ using Abp.Collections.Extensions;
 using MyDocumentManageNetCore.Application.UserInfos.Dto;
 using MyDocumentManageNetCore.Application.UserInfos;
 using MyDocumentManageNetCore.Application.GeneTypeResults;
+using MyDocumentManageNetCore.Application.GeneTypeResults.Dto;
+using MyDocumentManageNetCore.Application.GeneTestResults.Dto;
 
 namespace MyDocumentManageNetCore.Application.ReagentInfos
 {
@@ -42,8 +44,26 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         }
         [HttpGet]
         [EnableCors("AllowSameDomain")]
-        public async Task<List<ReagentGeneTypeTestResultDto>> GetReagentGeneTypeTestResults() {
-            var reagentInfo = await repository.GetAllListAsync();
+        public async Task<GeneTypeTestResultDto> GetReagentGeneTypeTests(Int64 reagentId = -1)
+        {
+            var geneTypeTests=await geneTypeResultAppService.GetGeneTypeTestResults(reagentId);
+            if (geneTypeTests==null|| geneTypeTests.Count<=0)
+            {
+                geneTypeTests = new List<GeneTypeTestResultDto>();
+                geneTypeTests.Add(new GeneTypeTestResultDto()
+                {
+                    ReagentID = reagentId,
+                    GeneTestResults = ObjectMapper.Map<List<GeneTestResultDto>>(geneInfoRepository.GetAllListAsync(g => g.ReagentID == reagentId).Result)
+                });
+            }
+            
+            
+            return geneTypeTests.FirstOrDefault();
+        }
+        [HttpGet]
+        [EnableCors("AllowSameDomain")]
+        public async Task<List<ReagentGeneTypeTestResultDto>> GetReagentGeneTypeTestResults(Int64 reagentId=-1) {
+            var reagentInfo =reagentId==-1? await repository.GetAllListAsync():await repository.GetAllListAsync(a=>a.Id==reagentId);
             var reagentInfoDto= ObjectMapper.Map<List<ReagentInfoDto>>(reagentInfo);
             var reagentGeneTypeTestResults = ObjectMapper.Map<List<ReagentGeneTypeTestResultDto>>(reagentInfoDto);
             reagentGeneTypeTestResults.ForEach(a =>
@@ -139,6 +159,8 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         {
             //var reagentInfo= repository.Get(id);
             await repository.DeleteAsync(a => a.ID == id);
+            await geneInfoRepository.DeleteAsync(a => a.ReagentID == id);
+            await geneTypeResultAppService.DeleteGeneTypeResultByReagentId(id);
         }
 
         public long GetMaxID()
