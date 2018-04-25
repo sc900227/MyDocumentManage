@@ -24,9 +24,11 @@ namespace MyDocumentManageNetCore.Application.UserInfos
         
         private readonly IRepository<TB_GeneInfo, Int64> repository;
         private readonly IRepository<TB_ReagentInfo, Int64> repositoryReagent;
-        public GeneInfoAppService(IRepository<TB_GeneInfo, Int64> _repository, IRepository<TB_ReagentInfo, Int64> _repositoryReagent) {
+        private readonly IRepository<TB_GeneTestResult, Int64> repositoryGeneInfo;
+        public GeneInfoAppService(IRepository<TB_GeneInfo, Int64> _repository, IRepository<TB_ReagentInfo, Int64> _repositoryReagent, IRepository<TB_GeneTestResult, Int64> _repositoryGeneInfo) {
             repository = _repository;
             repositoryReagent = _repositoryReagent;
+            repositoryGeneInfo = _repositoryGeneInfo;
         }
         [HttpPost]
         [EnableCors("AllowSameDomain")]
@@ -117,6 +119,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
         [EnableCors("AllowSameDomain")]
         public async Task DeleteGeneInfo(Int64 id) {
            await repository.DeleteAsync(a=>a.ID==id);
+           await repositoryGeneInfo.DeleteAsync(a => a.GeneID == id);
         }
         public Int64 GetMaxID() {
             var maxId = repository.GetAll().OrderByDescending(a => a.ID).Select(a => a.ID).FirstOrDefault();

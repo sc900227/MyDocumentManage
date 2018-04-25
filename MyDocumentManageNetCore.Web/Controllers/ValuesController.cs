@@ -21,6 +21,7 @@ namespace MyDocumentManageNetCore.Web.Controllers
             _notificationPublisher = notificationPublisher;
             repository = _repository;
         }
+        //public IHttpActionResult
         public JsonResult Index()
         {
             var result= repository.GetAll().OrderBy(a => a.ID).ToList();

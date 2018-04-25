@@ -21,6 +21,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="2.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="1.1.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.108" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.108" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +39,12 @@
     <ProjectReference Include="..\MyDocumentManageNetCore.Application\MyDocumentManageNetCore.Application.csproj" />
     <ProjectReference Include="..\MyDocumentManageNetCore.Domain\MyDocumentManageNetCore.Domain.csproj" />
     <ProjectReference Include="..\MyDocumentMange.EntityFrameworkCore\MyDocumentMange.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

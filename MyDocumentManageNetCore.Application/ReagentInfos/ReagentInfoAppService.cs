@@ -42,6 +42,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             geneInfoAppService = _geneInfoAppService;
             geneTypeResultAppService = _geneTypeResultAppService;
         }
+        
         [HttpGet]
         [EnableCors("AllowSameDomain")]
         public async Task<GeneTypeTestResultDto> GetReagentGeneTypeTests(Int64 reagentId = -1)
