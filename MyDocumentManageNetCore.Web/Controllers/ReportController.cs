@@ -1,34 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SQLite;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Security.AccessControl;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Http;
-using System.Web.Http.Results;
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MyDocumentManageNetCore.Domain.Controllers;
+using System;
+using System.IO;
 
 namespace MyDocumentManageNetCore.Web.Controllers
 {
-    
-    [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
+
+    [Route("api/[controller]")]
     public class ReportController : MyDocumentManageControllerBase
     {
         public IConfiguration Configuration { get; }
         public ReportController(IConfiguration configuration) {
             Configuration = configuration;
         }
-        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [HttpGet]
         [EnableCors("AllowSameDomain")]
         public FileStreamResult Download() {
             try
@@ -85,24 +72,24 @@ namespace MyDocumentManageNetCore.Web.Controllers
                     fs.Close();
                 }
                 //加密db文件
-                EncryptDb(copyPath);
+                //EncryptDb(copyPath);
             }
             return copyPath;
         }
-        public void EncryptDb(string copyPath) {
-            SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
-            builder.DataSource = copyPath;
-            builder.Pooling = true;
-            builder.FailIfMissing = true;
-            builder.JournalMode = SQLiteJournalModeEnum.Off;
-            builder.Password = "";
-            using (SQLiteConnection conn = new SQLiteConnection(builder.ConnectionString))
-            {
-                conn.Open();
-                conn.ChangePassword("pv123*456");
-                conn.Close();
-            }
-        }
+        //public void EncryptDb(string copyPath) {
+        //    SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
+        //    builder.DataSource = copyPath;
+        //    builder.Pooling = true;
+        //    builder.FailIfMissing = true;
+        //    builder.JournalMode = SQLiteJournalModeEnum.Off;
+        //    builder.Password = "";
+        //    using (SQLiteConnection conn = new SQLiteConnection(builder.ConnectionString))
+        //    {
+        //        conn.Open();
+        //        conn.ChangePassword("pv123*456");
+        //        conn.Close();
+        //    }
+        //}
         
     }
 }

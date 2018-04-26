@@ -20,5 +20,6 @@ namespace MyDocumentManageNetCore.Application
                 cfg => cfg.AddProfiles(thisAssembly)
             );
         }
+
     }
 }
