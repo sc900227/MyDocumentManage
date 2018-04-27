@@ -1,6 +1,7 @@
 ﻿using Abp.EntityFrameworkCore;
 using Abp.EntityFrameworkCore.Configuration;
 using Abp.Modules;
+using Castle.Core.Configuration;
 using System;
 using System.Reflection;
 
@@ -34,6 +35,7 @@ namespace MyDocumentMange.EntityFrameworkCore
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+            //IocManager.Register<IConfiguration>(Abp.Dependency.DependencyLifeStyle.Singleton);
         }
     }
 }

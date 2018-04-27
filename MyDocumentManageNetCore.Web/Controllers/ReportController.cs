@@ -20,7 +20,7 @@ namespace MyDocumentManageNetCore.Web.Controllers
         public FileStreamResult Download() {
             try
             {
-                var dbPath = "app/doc";//Configuration.GetSection("DbOption").GetValue<string>("DbPath");
+                var dbPath = Configuration.GetSection("DbOption").GetValue<string>("DbPath");
                 if (!Directory.Exists(dbPath))
                 {
                     throw new Exception("服务器下载路径异常");

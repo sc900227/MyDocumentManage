@@ -14,9 +14,9 @@ namespace MyDocumentMange.EntityFrameworkCore
         public LocalCoreDbContext CreateDbContext(string[] args)
         {
             var builder = new DbContextOptionsBuilder<LocalCoreDbContext>();
-            var configuration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
+            //var configuration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
 
-            MyDocumentManageDbContextConfigurer.Configure(builder, configuration.GetConnectionString("mydb"));
+            MyDocumentManageDbContextConfigurer.Configure(builder, AppConfigurtaionServices.GetAppSettings()["ConnectionStrings:mydb"]);
 
             return new LocalCoreDbContext();
         }

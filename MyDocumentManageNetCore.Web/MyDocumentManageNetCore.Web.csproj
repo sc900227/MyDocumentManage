@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
+	</PropertyGroup>
 
   <ItemGroup>
     <Content Remove="log4net.config" />
@@ -18,6 +18,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.4.0" />
@@ -30,7 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="log4net.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="wwwroot\swagger\ui\abp.js" />
     <None Include="wwwroot\swagger\ui\on-complete.js" />
   </ItemGroup>
@@ -45,6 +48,12 @@
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
