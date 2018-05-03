@@ -39,8 +39,8 @@ namespace MyDocumentManage.Application.UserInfos
             return ObjectMapper.Map<GeneInfoDto>(geneInfo);
         }
 
-        public async Task DeleteGeneInfo(GeneInfoDto input) {
-           await repository.DeleteAsync(a=>a.ID==input.Id);
+        public async Task DeleteGeneInfo(Int64 id) {
+           await repository.DeleteAsync(a=>a.ID==id);
         }
         public Int64 GetMaxID() {
             var maxId = repository.GetAll().OrderByDescending(a => a.ID).Select(a => a.ID).FirstOrDefault();

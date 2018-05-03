@@ -19,7 +19,7 @@ namespace MyDocumentManage.Application.GeneTypeResults
         [HttpPost]
         Task<GeneTypeResultDto> UpdateGeneTypeResult(GeneTypeResultDto input);
 
-        [HttpPost]
-        Task DeleteGeneTypeResult(GeneTypeResultDto input);
+        
+        Task DeleteGeneTypeResult(Int64 id);
     }
 }

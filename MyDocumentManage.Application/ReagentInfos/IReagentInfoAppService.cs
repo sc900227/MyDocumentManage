@@ -22,7 +22,7 @@ namespace MyDocumentManage.Application.ReagentInfos
         Task<ReagentInfoDto> UpdateReagentInfo(ReagentInfoDto input);
 
 
-        [HttpPost]
+        
         Task DeleteReagentInfo(Int64 id);
         
        

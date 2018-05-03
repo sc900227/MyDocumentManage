@@ -20,8 +20,8 @@ namespace MyDocumentManage.Application.UserInfos
         [HttpPost]
         Task<GeneInfoDto> UpdateGeneInfo(GeneInfoDto input);
 
-        [HttpPost]
-        Task DeleteGeneInfo(GeneInfoDto input);
+        
+        Task DeleteGeneInfo(Int64 id);
         
     }
 }

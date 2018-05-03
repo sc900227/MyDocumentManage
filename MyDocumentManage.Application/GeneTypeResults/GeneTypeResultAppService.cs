@@ -26,9 +26,9 @@ namespace MyDocumentManage.Application.GeneTypeResults
             
         }
 
-        public async Task DeleteGeneTypeResult(GeneTypeResultDto input)
+        public async Task DeleteGeneTypeResult(Int64 id)
         {
-             await repository.DeleteAsync(a => a.ID == input.Id);
+             await repository.DeleteAsync(a => a.ID == id);
         }
 
         public async Task<List<GeneTypeResultDto>> GetGeneTypeResults()
