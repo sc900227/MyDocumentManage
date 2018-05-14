@@ -130,6 +130,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             return reagents;
         }
         [HttpGet]
+        [EnableCors("AllowSameDomain")]
         public async Task<List<ReagentInfoDto>> GetReagentInfos()
         {
             var reagentInfos = await repository.GetAllListAsync();
@@ -154,7 +155,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
             await repository.UpdateAsync(reagentInfo);
             return ObjectMapper.Map<ReagentInfoDto>(reagentInfo);
         }
-        
+        [HttpDelete]
         [EnableCors("AllowSameDomain")]
         public async Task DeleteReagentInfo(Int64 id)
         {

@@ -116,6 +116,7 @@ namespace MyDocumentManageNetCore.Application.UserInfos
             await repository.UpdateAsync(geneInfo);
             return ObjectMapper.Map<GeneInfoDto>(geneInfo);
         }
+        [HttpDelete]
         [EnableCors("AllowSameDomain")]
         public async Task DeleteGeneInfo(Int64 id) {
            await repository.DeleteAsync(a=>a.ID==id);

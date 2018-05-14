@@ -115,6 +115,8 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
             return ObjectMapper.Map<GeneTypeResultDto>(info);
 
         }
+        [HttpDelete]
+        [EnableCors("AllowSameDomain")]
         public async Task DeleteGeneTypeResultByReagentId(Int64 reagentId) {
             var geneTypeResults=await  repository.GetAllListAsync(a => a.ReagentID == reagentId);
             if (geneTypeResults!=null&&geneTypeResults.Count>0)
@@ -125,6 +127,7 @@ namespace MyDocumentManageNetCore.Application.GeneTypeResults
                 }
             }
         }
+        [HttpDelete]
         [EnableCors("AllowSameDomain")]
         public async Task DeleteGeneTypeResult(Int64 id)
         {

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MyDocumentManageNetCore.Domain.Controllers;
 using System;
+using System.Data.SQLite;
 using System.IO;
 
 namespace MyDocumentManageNetCore.Web.Controllers
@@ -20,6 +21,7 @@ namespace MyDocumentManageNetCore.Web.Controllers
         public FileStreamResult Download() {
             try
             {
+
                 var dbPath = Configuration.GetSection("DbOption").GetValue<string>("DbPath");
                 if (!Directory.Exists(dbPath))
                 {
@@ -71,25 +73,26 @@ namespace MyDocumentManageNetCore.Web.Controllers
                     fs.Flush();
                     fs.Close();
                 }
-                //加密db文件
-                //EncryptDb(copyPath);
+                
             }
+            //加密db文件
+            EncryptDb(copyPath);
             return copyPath;
         }
-        //public void EncryptDb(string copyPath) {
-        //    SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
-        //    builder.DataSource = copyPath;
-        //    builder.Pooling = true;
-        //    builder.FailIfMissing = true;
-        //    builder.JournalMode = SQLiteJournalModeEnum.Off;
-        //    builder.Password = "";
-        //    using (SQLiteConnection conn = new SQLiteConnection(builder.ConnectionString))
-        //    {
-        //        conn.Open();
-        //        conn.ChangePassword("pv123*456");
-        //        conn.Close();
-        //    }
-        //}
+        public void EncryptDb(string copyPath) {
+            SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder();
+            builder.DataSource = copyPath;
+            builder.Pooling = true;
+            builder.FailIfMissing = true;
+            builder.JournalMode = SQLiteJournalModeEnum.Off;
+            builder.Password = "";
+            using (SQLiteConnection conn = new SQLiteConnection(builder.ConnectionString))
+            {
+                conn.Open();
+                conn.ChangePassword("pv123*456");
+                conn.Close();
+            }
+        }
         
     }
 }

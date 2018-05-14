@@ -44,7 +44,8 @@ namespace MyDocumentManageNetCore.Application.GeneTestResults
             Int64 id = await repository.InsertAndGetIdAsync(geneTestResult);
             return ObjectMapper.Map<GeneTestResultDto>(geneTestResult);
         }
-
+        [HttpDelete]
+        [EnableCors("AllowSameDomain")]
         public async Task DeleteGeneTestResult(Int64 id)
         {
             await repository.DeleteAsync(a => a.ID == id);
