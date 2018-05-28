@@ -14,6 +14,7 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
     {
         Task<List<ReagentGeneTypeTestResultDto>> GetReagentGeneTypeTestResults(Int64 reagentId);
         Task<List<ReagentGeneInfoDto>> GetReagentGeneInfos();
+        Task<List<ReagentGeneInfoDto>> GetReagentGeneInfosById(Int64 id);
         PagedResultDto<ReagentInfoDto> GetReagentInfosPage(GetReagentInfosInput input);
         Task<List<ReagentInfoDto>> GetReagentInfos();
 

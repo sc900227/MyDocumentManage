@@ -131,6 +131,17 @@ namespace MyDocumentManageNetCore.Application.ReagentInfos
         }
         [HttpGet]
         [EnableCors("AllowSameDomain")]
+        public async Task<List<ReagentGeneInfoDto>> GetReagentGeneInfosById(Int64 id)
+        {
+            var reagentInfos = await repository.GetAllListAsync(a=>a.ID==id);
+            var reagents = ObjectMapper.Map<List<ReagentGeneInfoDto>>(reagentInfos).OrderBy(a => a.Id).ToList();
+
+            reagents.ForEach(a => a.GeneInfos = geneInfoAppService.GetGeneInfos(a.Id).Result);
+
+            return reagents;
+        }
+        [HttpGet]
+        [EnableCors("AllowSameDomain")]
         public async Task<List<ReagentInfoDto>> GetReagentInfos()
         {
             var reagentInfos = await repository.GetAllListAsync();
